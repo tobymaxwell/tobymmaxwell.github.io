@@ -1,0 +1,23 @@
+---
+title: "Leaf Area Index"
+---
+
+###Equipment
+
+First you need to know you have the right camera. A regular DSLR with a fisheye likely will not work. You need a full frame camera to capture a full 180 degree hemisphere. Some cheap options exist though, our lab uses a [nikon coolpix 4300](http://imaging.nikon.com/lineup/coolpix/others/4300/index.htm) with the [fisheye attachment lens](https://www.amazon.com/Nikon-FC-E8-Fish-Eye-Converter-Digital/dp/B00004U8LO). They are available refurbished on ebay quite cheap.
+
+You also need a tripod, with a level, and a compass.
+
+###Procedure
+At every sampling site (predetermined for other analysis, e.g. soil, tree rings...), set up the tripod at a standard height. The height itself doesn't matter, however, you want consider whether you are measuring understory or not. This is a scientific question as much as a logistical question. 
+
+With the tripod set to the appropriate height, orient the camera so that the same part of the image is always facing due north. This will help tremendously as you would otherwise have to reorient the images in the software, and it is hard to keep track of these things. Just bring a compass, and point the camera north.
+
+Snap a picture! And make sure you are out of the way. you'll need to duck really low, and other people can't be around, or they will almost guaranteed be in the picture, alternatively they can hide behind trees.
+
+I try to bring a notebook and take pictures of a piece of paper with each site ID before I take the LAI photo. This helps remember later... trust me you will forget the order you did things!
+
+###Analysis
+As described on the previous page, analysis software is available [from the cary institute](http://www.caryinstitute.org/science-program/our-scientists/dr-charles-d-canham/gap-light-analyzer-gla). This has worked well for me, and has excellent supporting documentation, and peer reviewed, published validation. 
+
+This software requires an older version of windows, so I recommend getting it installed and ready, and taking a look at the workflow before going to the field. Understanding the analysis will lead to good field practices to support that analysis. 

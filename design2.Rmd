@@ -1,0 +1,19 @@
+---
+title: "Design 2"
+---
+
+Some basic designs are explained, justified, and exemplified below. Credit for these notes goes to Fundamentals of Tree Ring Research by James H. Speer, and An introduction to Statistical Problem Solving by McGrew et al.
+
+#Sampling
+####Random
+Within an area of interest use a random number generator to determine plot location on a grid. Then within that plot random numbers could be used beforehand to determine where to sample, or used with a compass to sample in random directions within a plot. A systematic variant of this, is to sample n locations at 360/n degrees, and x meters from the center of your plot. Each of these has advantages, and has been published, really it comes down to your ability to spend time setting up your sites, and the practical concerns on the ground.
+
+####Stratified random sampling
+Selecting Sites, plots, subplots based on categories. For example, aspect is important for determining many ecosystem properties, so one could sample plots at multiple aspects with the same vegetation types. You can do this for multiple levels of hierarchy, (e.g. vegetation type, on different aspects, within varied geology) but it generates a lot of sampling requirements very quickly!  
+
+##Targeted
+If there is a reason to select for certain individuals in a population. For example in a tree ring study, you might want the oldest ones to generate the largest chronologies. Or for soils, we may be interested in what happens under a tree's canopy vs outside of it, so rather than sampling randomly across a site, we sample known distances from trees. 
+
+#Plots
+Circular or square plots can be constructed to evaluate that particular area as representative. Circular plots can be easier because square plots reuiqre a compass to set up a large plot that is actually square. Transects can also be established, essentially this ends up being a long rectangle where there is some sampling criteria.
+For example, sample every tree with greater than 20 cm diameter.

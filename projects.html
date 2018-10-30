@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title></title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 64px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+
+.section h2 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h3 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h4 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h5 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h6 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Toby Maxwell</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="about.html">About Me</a>
+</li>
+<li>
+  <a href="projects.html">Current Projects</a>
+</li>
+<li>
+  <a href="pubs.html">Publications</a>
+</li>
+<li>
+  <a href="https://tobymaxwell.github.io/files/CV.pdf">CV</a>
+</li>
+<li>
+  <a href="methods.html">Methods</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="contact.html">
+    <span class="fa fa-envelope fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://twitter.com/tobymmaxwell">
+    <span class="fa fa-twitter fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://www.linkedin.com/in/toby-maxwell-18aa195b/">
+    <span class="fa fa-linkedin fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="http://github.com/eeooo4">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+
+</div>
+
+
+<div id="current-projects" class="section level1">
+<h1>Current Projects</h1>
+<div id="the-climate-paradox-mapping-resilience-and-vulnerability-of-montane-forests" class="section level3">
+<h3>The climate paradox: mapping resilience and vulnerability of montane forests</h3>
+<p><img src="images/EVI.jpg" style="width:25%; border:2px solid; margin-right: 20px" align="left"> Trees can adjust to natural climate fluctuations by efficiently regulating leaf carbon and water exchange; however, the rapid pace of human induced climatic change threatens the ability of forests to sequester carbon and resist draught. While these limits are often characterized at the scale of an individual tree, or a plot, this research seeks to characterize regional scale drivers of forest productivity across the state of Oregon over recent decades. Recent research has found the most stressed forest ecosystems are mixed conifer forests where drought induced mortality has led to massive dieoffs. However, at high elevations in these same forests, tree lines are expanding, with longer growing seasons aiding forest expansion. This project seeks to develop of a risk index for dieoff of different regions based on characterizations of the impact of shifting climate. By measuring plant, site, and regional scale factors controlling productivity over time we will combine spatial and temporal data, generating a series of maps to inform land management, educate the general public, and direct future scientific efforts. To understand the range of impact of climate change, we identified regions in Oregon which are experiencing a variety of changes in climate. In the Northeast, the Wallowa mountains show increased moisture, while many Western locations are increasingly dry. By identifying factors which link spatial scales, this work will develop a tool to aid future efforts to model the impact of climate change and disturbance on forest evolution, and natural resources.<br />
+ </p>
+</div>
+<div id="probing-for-the-role-of-fungal-networks-in-nutrient-transfer-of-novel-plant-communities-across-the-pnw" class="section level3">
+<h3>Probing for the role of fungal networks in nutrient transfer of novel plant communities across the PNW</h3>
+<p>Injecting Enriched CO<sub>2</sub> into Growth Chambers, May, 2018<br />
+<img src="images/prairie.jpg" style="width:50%; border:2px solid; margin-right: 20px" align="left"></p>
+<p>The project will assess plant and soil community sensitivity to experimentally imposed drought across a 520 km latitudinal gradient in the PNW. A broad climatic gradient will be used to study typical prairie and pasture systems where increasingly severe seasonal differences, characterized by wetter winters and drier summers, have caused declines in productivity. General hypotheses pertaining to the role of fungal networks in maintaining diverse prairie and low-diversity pasture productivity will be tested to address a major challenge for sustainability in the region and in similar systems elsewhere. Specifically, the proposed tasks will identify plant and fungal species that best maintain primary productivity, plant water-use efficiency, and foster C and N exchange in communities under stress. This knowledge will be used to quantify thresholds of species composition and soil resource availability beyond which intervention is needed to prevent loss of biodiversity and resilience to drought. Alterations of mycorrhizal mediated transfer or retention of C and N will be monitored using pulse stable isotope labeling experiments to determine whether and how inter-specific connectivity increases community resilience and productivity under imposed stress. A replicated nested design across a latitudinal gradient will be used to characterize mycorrhizal network behaviors that can be simplified to improve inter-specific connectivity and resource transfer in native and managed systems. Passive and active resource transport among different plant species and fungi will be distinguished through stable isotope probing of DNA sequences and used to develop a spatially-explicit mechanistic model for the scaling of local mutualistic and competitive interactions affecting composition and function of common mycorrhizal networks.</p>
+</div>
+<div id="connecting-carbon-and-oxygen-isotope-ratios-from-plant-cellulose-to-soil-carbonates-to-improve-understanding-of-environmental-stress" class="section level3">
+<h3>Connecting carbon and oxygen isotope ratios from plant cellulose to soil carbonates to improve understanding of environmental stress</h3>
+<p>Eastern Sierra Aspen, October 2015<br />
+<img src="images/leaves.jpg" style="width:50%; border:2px solid; margin-right: 20px" align="left"></p>
+<p>In this project I am helping advise UO Geology student Adrian Broz in identifying a mechanism and mathematical transfer functions to relate carbon and oxygen isotope ratios of soil carbonates as a reflection of plant physiological processes that are identifiable in leaf and woody cellulosic isotope ratios. As soil microorganisms respire CO<sub>2</sub>, the soil atmosphere is in equilibrium with soil water, preserving that organically derived signal. Connecting these two pools will allow for soil carbonates in paleosols to be used to identify atmospheric conditions throughout geologic time, informing our understanding of plant responses to past environmental conditions in order to better predict future change.</p>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

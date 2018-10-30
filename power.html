@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Power</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 64px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+
+.section h2 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h3 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h4 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h5 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h6 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Toby Maxwell</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="about.html">About Me</a>
+</li>
+<li>
+  <a href="projects.html">Current Projects</a>
+</li>
+<li>
+  <a href="pubs.html">Publications</a>
+</li>
+<li>
+  <a href="https://tobymaxwell.github.io/files/CV.pdf">CV</a>
+</li>
+<li>
+  <a href="methods.html">Methods</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="contact.html">
+    <span class="fa fa-envelope fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://twitter.com/tobymmaxwell">
+    <span class="fa fa-twitter fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://www.linkedin.com/in/toby-maxwell-18aa195b/">
+    <span class="fa fa-linkedin fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="http://github.com/eeooo4">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Power</h1>
+
+</div>
+
+
+<p>How many samples to take of a population to guarantee a useful result? A time honored question with no ‘real’ answer. But some things can be done to maximize success!</p>
+<p>First, a short discussion on a priori power analysis.</p>
+<div id="from-the-package-contents" class="section level4">
+<h4>From the package contents:</h4>
+<p>“Power analysis is an important aspect of experimental design. It allows us to determine the sample size required to detect an effect of a given size with a given degree of confidence. Conversely, it allows us to determine the probability of detecting an effect of a given size with a given level of confidence, under sample size constraints. If the probability is unacceptably low, we would be wise to alter or abandon the experiment.</p>
+<p>The following four quantities have an intimate relationship:</p>
+<ol style="list-style-type: decimal">
+<li>sample size</li>
+<li>effect size</li>
+<li>significance level = P(Type I error) = probability of finding an effect that is not there</li>
+<li>power = 1 - P(Type II error) = probability of finding an effect that is there Given any three, we can determine the fourth.&quot;</li>
+</ol>
+<p>This gives us the ‘power’ to estimate sample size given pre-determined tolerances for type I and II errors, with a simple estimation of the effect size. How do we estimate the effect sizes? As stated above, it has to be an informed, conservative guess.</p>
+<p>This also demands a discussion of the merits of controlling for type I vs type II error. There is an ongoing debate on this topic in climate change research. In short, some argue that we are too cautious with type II error, allowing for false negatives far more than false positives. This relates to many things including politics of course, but I’ll stop here and give one citation that elucidates the discussion nicely. <a href="https://www.researchgate.net/publication/268035363_Awareness_of_Both_Type_1_and_2_Errors_in_Climate_Science_and_Assessment">Find it here</a>.</p>
+</div>
+<div id="example-below" class="section level4">
+<h4>Example below</h4>
+<p>Say I want to know the effect of a night out on the town on how many minutes after 9 someone shows up to work. I’ll measure minutes after 12 pm they get home, and minutes after 9 they show up to work. My null hypothesis is that staying out has no relatioship to the time people show up to work. I estimate that every 60 minutes past 12 someone is out leads to 15 minutes of tardyness. Is this a small or large effect size? The standard seems to have been set by <a href="http://www.utstat.toronto.edu/~brunner/oldclass/378f16/readings/CohenPower.pdf">Cohen 1988</a>, where recommendations are summarised for detecting differences between groups for many types of analyses. A summary is available online <a href="https://www.statmethods.net/stats/power.html">here</a>.</p>
+<p>Generally scientists have settled on accepting 5% type I error rates. Type II error is much less discussed, commonly 20% error rates are used for conservative estimates.</p>
+<pre class="r"><code>library(pwr)
+#need to select appropriate function for your design. I&#39;m just going to measure everyone in my hallway, so there&#39;s no grouping, and I&#39;ll use a correlation test
+##pwr.r.test(n = , r = , sig.level = , power = )
+ns&lt;-NULL
+test&lt;-NULL
+rvals&lt;-c(0.1, 0.2, 0.3, 0.4, 0.5)
+pow&lt;-c(0.2, 0.15)
+for(j in pow){
+  for(i in rvals){
+  test&lt;-pwr.r.test(r=i, sig.level = 0.05, power=j) 
+  #solving for n so it is not provided.
+  ##r is an estimated correlation coefficient (analagous to effect size. )
+  ns&lt;-c(ns, test$n)
+  }
+}
+library(ggplot2)
+ns&lt;-as.data.frame(ns);ns$rvals&lt;-c(rvals,rvals)
+ns$power&lt;-c(rep(&quot;0.2&quot;, 5), rep(&quot;0.15&quot;, 5))
+ggplot(data=ns, aes(y=ns, x=rvals,shape = power))+geom_point(size = 3)+theme_classic()</code></pre>
+<p><img src="power_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<pre class="r"><code>#Maybe I want to solve for n to test from groups that represent grad stuedents years 1-5 of grad school
+ns&lt;-NULL
+test&lt;-NULL
+rvals&lt;-c(0.1, 0.2, 0.3, 0.4, 0.5)
+pow&lt;-c(0.2, 0.15)
+for(j in pow)
+for(i in rvals){
+  test&lt;-pwr.anova.test(k = 5, f =i , sig.level = 0.05, power =j )
+  #solving for n so it is not provided.
+  ##r is an estimated correlation coefficient (analagous to effect size. )
+  ns&lt;-c(ns, test$n)
+}
+
+ns&lt;-as.data.frame(ns);ns$rvals&lt;-c(rvals,rvals)
+ns$power&lt;-c(rep(&quot;0.2&quot;, 5), rep(&quot;0.15&quot;, 5))
+ggplot(data=ns, aes(y=ns, x=rvals,shape = power))+geom_point(size = 3)+theme_classic()</code></pre>
+<p><img src="power_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+---
+title: "Carbon and Nitrogen"
+---
+
+###Sample preparation
+A very small amount (2-10 mg) of a sample will be used for total carbon and nitrogen analysis. As a result, samples must be well homogenized. Depending on the amount of sample you have this can be done in a number of ways. After drying you can
+
+1. Mortar and pestle with liquid nitrogen
+2. Grind in a coffee grinder
+3. Powder in a ball mill
+
+If the first two are your option, then you may want to pass the sample through a #40 sieve (425 micron) to assure consistent measurements.
+
+After grinding samples then need to be packaged into tin capsules and weighed on a micro balance to 0.001 mg accuracy.
+
+A note at this point, if you are measuring soils with carbonates present this will interfere with the analysis. You need to follow a separate procedure, detailed in the [attached article by Harris et al.](http://stableisotopefacility.ucdavis.edu/articles/Harris%20ea%202001(Acid%20Fumigation).pdf)
+
+###Elemental Analysis
+Perhaps the most common analyzer is the Costech ECS 4010. This robust instrument combusts the tin capsule in a high oxygen environment at 1020&deg;C. This causes the tin to combust, raising the sample temperature to about 1800C. In theory this rapid and high energy conversion quantitatively converts the material into gas, carbon is then completely oxidized by a chromium oxide catalyst, and nitrogen is left as N2 with and excess oxygen removed by reduced copper wires. Water is removed with magnesium perchlorate, and the gasses separated by a chromatographic column, and measured by a [thermal conductivity detector](https://en.wikipedia.org/wiki/Thermal_conductivity_detector). More information on the specifics of running a costech are available online, one good source is [here](https://lter.kbs.msu.edu/protocols/148).
+
+###Loss on Ignition
+Another simpler way to estimate soil carbon is the loss on ignition method. This involves combustion of soil in an oven at 550&deg;C to remove carbon - effectively combusting the carbon by conversion of complex organic matter to CO~2~ and H~2~O. This is not quantitative as soil minerals will also begin to decompose, for example common soil minerals such as goethite, gibbsite and kaolinite will lose OH groups resulting in weight loss of a sample. This can be a good method for qualitative comparisons as it is robust, efficient, and simple. 
+
+####Materials
+Muffle Furnace (or oven that can reach and sustain 550&deg;C)  
+Crucibles  
+Scale  
+
+How much soil is used depends on the organic matter content, and how sensitive your scale is. Think, if you have an agricultural soil with 1-2% organic matter, in a 20 gram sample you will have to measure a loss of only 0.2-0.4 grams. 
+
+####Procedure
+Weigh crucible, add soil, weigh crucible with the soil, add to the oven and combust at 550&deg;C for 3 hours.
+
+A more detailed description of the procedure, and parameterization of the concerns for mineral alterations can be read about in [this paper](https://s3.amazonaws.com/academia.edu.documents/44088168/Estimating_soil_organic_carbon_through_l20160324-28196-w3id14.pdf?AWSAccessKeyId=AKIAIWOWYYGZ2Y53UL3A&Expires=1529525147&Signature=tngNbQh0MawmYpDVeTUckhX3IPQ%3D&response-content-disposition=inline%3B%20filename%3DEstimating_soil_organic_carbon_through_l.pdf)

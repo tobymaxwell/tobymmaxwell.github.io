@@ -1,0 +1,61 @@
+---
+title: "Soil Iron Mineral Extractions"
+---
+#####Selective dissolution of soil iron for mineralogical and microbiological evaluation
+
+These reagents extract different fractions of iron as indicated, but no extractant is perfect, and depending on the soil there is some overlap, i.e. a small amount of another iron fraction may be extracted at the same time. Further, every soil may require calibration as the various mineral fractions can vary by orders of magniude among soils. As a result, small pilot experiments should be done prior to extraction a whole sample set, to ensure accuracy and also save time.
+
+But how to do those pilots? I'll provide some numbers to start with here, and if I were to calibrate for a new soil, I'd extract with maybe +/- 50% of the reactants. Then see if the results come out the same, and you can adjust accordingly, i.e. if 50% more gives a different result, you'll need to add even more until the result plateaus, so you know you have run a reaction to completion. You will also save time in the end by doing this because in the end your UV-VIS analysis may show that you need to adjust the expected concentrations to get a good number.
+
+#####Blanks
+Just a quick note on blanks. Procedures like this can get contaminated by any number of things no matter how clean you try to be, of course it is necessary to clean glassware and reaction vials/tubes well, however, to account for any contaminations, or leaching, you want to run **method blanks**. These are treated exactly as a sample, except no sample is added. At the end, whatever concentration is 'measured' for iron in this extract is added or subtracted from the final value. This sets the Zero value. 
+
+In addition to a method blank for the extractants, you will also need a blank for the ferrozine solution here. So by the end youll have 3 or 4 method blanks, and then at the analysis phase 3 or 4 reagent blanks simply analyzing water rather than extractant. This can significantly shift the baseline values of an experiment and must be done.
+
+#####Extraction Descriptions
+
+1.	Pyrophosphate extraction – removes iron present in organic-metal complexes (complexed with soil organic matter).  
+2.	Dithionite extraction – reduces and extracts Fe(III) in secondary minerals such as goethite, hematite, and ferrihydrite; also removes aluminum and silicon from some short-range order aluminosilicates
+3.	Oxalate extraction – extracts iron from ferrihydrite and other short-range order oxyhydroxides. Includes all amorphous Fe(III) potentially available for microbial reduction, but is not necessarily a good indicator of the true amount of Fe(III) available for microbial reduction, since poorly reducible forms of Fe(III) are also extracted. Also dissolves short-range order aluminosilicates and extracts some iron and aluminum from organic complexes.
+4.	Dilute acid – a measure of the Fe(II) produced during reduction of Fe(III)
+5.	Hydroxylamine – selective extractant for microbially reducible Fe(III)
+
+#####Extraction Procedures  
+
+Extractions can be done in 50 mL centrifuge tubes, convenient for shaking, reacting, and settling.  
+
+1.	Pyrophosphate: Extract 0.5 g soil for 16 hours with 45 ml 0.1 M tetrasodium pyrophosphate. Centrifuge at 15600 x G for 30 minutes or until fine colloids are removed.
+
+2.	Dithionite: To 50 mg soil add 20 ml 0.3 M sodium citrate and 2.5 mL 1M Sodium Bicarbonate. Shake to mix. Heat in a water bath until solutions are 75-80&deg;C. Stir immediately for 1 minute then return to water bath and shake a few more times over the next 5 minutes. Remove again, and add 0.5 g additional dithionite. Stir well, and then return to heat and shake several times over the next 10 minutes. If the soil was red, there should be no color left. Allow to cool to room temperature and centrifuge. If supernatant is cloudy, add 5 mL saturated NaCl and 5 mL acetone to flocculate. Shake, and re-centrifuge at 5000x G for 10 minutes. Dilute to a known volume before analysis. This procedure worked well for reasonably high Fe, highly weathered ultisols and alfisols. An agricultural loamy soil may require around 5 grams of soil with similar reagent volumes.
+
+3.	Oxalate:To make the oxalate solution mix 16.2 g ammonium oxalate monohydrate and 10.8 g oxalic acid monohydrate per liter of water. Adjust the pH to 3.0 with either ammonium oxalate (increase pH) or oxalic acid (decrease pH). Watch out, it takes forever for pH to equilibrate and it changes exponentially more quickly the closer the solution pH gets to the pKa. Do this slowly with small additions and something else to do while you wait. To extract: To 0.5 g soil add 50 ml ammonium oxalate solution (buffered at pH 3.0). Shake for 4 hours in the dark, but not longer. (light affects dissolution of iron in the presence of oxalate). If you have high short range order concentrations try 0.25 g soil to 50 mL.
+
+4.	Dilute acid: usually 1 g soil plus 50 ml 0.5 M HCl. Lovley and Phillips 1986. Appl Env Microb 51:683
+
+5.	Hydroxylamine: to 1 g soil add 50 ml 0.25 M hydroxylamine hydrochloride in 0.25 M HCl (per liter: 17.4 g hydroxylamine hydrochloride and 20.8 ml concentrated HCl). Shake for one hour. Lovley and Phillips 1987. Appl Env Microb 53:1536.
+
+#####Making Standard Solutions
+Ferrozine Solution: Add 3 grams Ammonium Acetate  and 1 g ferrozine to 50 mL water in a 100 mL volumetric flask. Dilute to 100 mL after dissolved. Add 0.2 g ascorbic acid just before analysis.
+Ferrozine Blank: Same as above, just without ferrozine. 
+
+Standards: Ferrous Ammonium Sulfate Hexahydrate (FeAmSu)can be used as a standard. Fe(NH4)2(SO4)2 6H2O, FW: 392.15g/mol, Fe is 55.8g/mol.
+Easiest to make a stock solution and then standards as appropriate. For me, the range of 0.2 mg/L-10mg/L covered all of my samples nicely.
+To make a 274 mg/L stock solution add 1.96 grams of FeAmSu to 500 mL water in a 1 L volumetric flask. Add 20 mL 6M HCl, and then dilute to 1 L.
+Dilute to necessary quantities, and before anything calculate how much you will need so that you are using only 1 batch of standard and ferrozine solution per round of analysis (this just makes it easier, fewer blanks are involved).
+```{r}
+#remember M1V1=M2V2? Just proportional dilutions.
+##Here's how much of that 274 ppm stock is required to make 100 mL of a 10 ppm standard, can repeat for other standrards.
+M1<-274
+V2<-100
+M2<-10
+V1<-function(M1, V2, M2){(M2*V2)/M1}
+V1(M1,V2,M2)
+
+```
+
+#####Determination of iron in oxalate, acid, or hydroxylamine extracts
+Prepare the reagent (from Dominik and Kaupenjohann 2000. Talanta 51:701): Into cuvets, pipet 0.2 ml sample or standard, then add 0.8 ml reagent. Cap, mix, and wait until color is fully developed. This is usually within an hour, but it is good to confirm. The color is stable until the next day. Read absorbance at 565 nm. The working range is about 0.2 to 10 mg/L.
+
+####Determination of iron in pyrophosphate and dithionite extracts
+Pipet 0.2 ml sample or standard into cuvettes. Add 0.04 ml 6 M HCl to neutralize. If the samples have been diluted with water, add proportionally less HCl. Add 0.04 ml water to the standards if they are not made in a pyrophosphate matrix; if they are made in pyrophosphate, add 0.04 ml HCl. Then add 0.8 ml reagent (same as above analysis), mix, and read absorbance at 565 nm once color is fully developed. Do not wait until the next day – some iron may begin to precipitate. If the samples are heavily colored, prepare a corresponding correction sample for each sample by using a reagent without ferrozine; subtract the absorbance from this sample (the background absorbance) from the absorbance of the samples with iron color developed.
+

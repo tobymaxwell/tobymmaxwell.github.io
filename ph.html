@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>pH</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 64px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+
+.section h2 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h3 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h4 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h5 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h6 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Toby Maxwell</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="about.html">About Me</a>
+</li>
+<li>
+  <a href="projects.html">Current Projects</a>
+</li>
+<li>
+  <a href="pubs.html">Publications</a>
+</li>
+<li>
+  <a href="https://tobymaxwell.github.io/files/CV.pdf">CV</a>
+</li>
+<li>
+  <a href="methods.html">Methods</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="contact.html">
+    <span class="fa fa-envelope fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://twitter.com/tobymmaxwell">
+    <span class="fa fa-twitter fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://www.linkedin.com/in/toby-maxwell-18aa195b/">
+    <span class="fa fa-linkedin fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="http://github.com/eeooo4">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">pH</h1>
+
+</div>
+
+
+<div id="what-is-ph" class="section level3">
+<h3>What is pH?</h3>
+<p>The basic equation for pH is below. It is a measure of the concentration of hydrogen ions in solution (often referred to as ‘protons’ since they carry one proton). What does this mean? Well, hydrogen atoms are one of the more readily transferred atoms between any chemical constituent of the soil. Their mobility often determines solubility and reactivity in water as the loss of a hydrogen atoms can lead to ionization of a compound. Thus the basic equation for understanding pH is below. <span class="math display">\[pH=-log_{10}[H^{+}]\]</span></p>
+<p>A more nuanced equation helps understand what controls pH in a system: the henderson hasselbach equation (below), which helps understand the influence of pH on a system through the pKa property. The pKa of a molecule is the pH of a solution where the acid (HA) and base (A<sup>-</sup>) forms of that molecule are present in equal concentrations. What does this mean? At pH greater than the pKa the base anionic form will dominate, potentially leading to ‘deprotonation’, or removal of a hydrogen, and resultant ionization of that molecule. At pH below the pKa the acid, or ‘protonated’ form predominates resulting in precipitation, or the insoluble phase as the dominant form. There is more complicated chemistry that occurrs at mineral surfaces that I can’t get into here. But overall, just know that pH both relates to and controls solublity of ions in solution.</p>
+<p><span class="math display">\[pH=pK_{a} + log_{10}[A^{-}/HA]\]</span></p>
+</div>
+<div id="how-to-measure-ph" class="section level3">
+<h3>How to measure pH</h3>
+<p>There is no one way to measure soil pH, so more important than anything is to measure pH the same way every time, but here’s an accepted method that uses 2:1 water:soil. If you want to learn all there is to know about pH and soil see the <a href="http://www.geokniga.org/bookfiles/geokniga-handbook-soil-analysis.pdf">handbook of soil analysis</a></p>
+<div id="materials" class="section level4">
+<h4>Materials</h4>
+<p>pH probe Buffers for calibration (commonly pH 2, 4, 7, and possibly 9)</p>
+</div>
+<div id="procedure" class="section level4">
+<h4>Procedure</h4>
+<div id="plain-water" class="section level5">
+<h5>Plain Water</h5>
+<ol style="list-style-type: decimal">
+<li>Mix 10 grams soil with 20 mL water in a 120 mL specimen cup.</li>
+<li>Stir with a glass rod several times over the course of 10 minutes.</li>
+<li>Stir at 10 mintues, then let sit for 5 minutes.</li>
+<li>Calibrate pH electrode with reference buffers.</li>
+<li>Wash pH electrode with DI water, dab dry with kimwipe, and submerge in the suspension (do not let electrode touch the bottom, or the soil solution)</li>
+</ol>
+</div>
+<div id="exchangeable-acidity---cacl2" class="section level5">
+<h5>Exchangeable Acidity - CaCl<sub>2</sub></h5>
+<p>Repeat the procedure, but instead of plain water, use 0.01 M CaCl<sub>2</sub>.</p>
+<p>This is done because Ca<sup>2+</sup> is a strong sorbent, and commonly Al3+ is the most concentrated cation on the mineral exchange complex. As a result, CaCl<sub>2</sub> solution can be used in place of water to assess the exchangeable acidity. Al<sup>3+</sup> is released, it hydrolyzes water, and generates greater acidity. This is relates to why soils become more acidic as they weather.</p>
+</div>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

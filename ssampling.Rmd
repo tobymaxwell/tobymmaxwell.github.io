@@ -1,0 +1,21 @@
+---
+title: "Soil Sampling"
+---
+
+####How deep?
+For convenience soil is commonly defined as the first 2 meters of material below ground  (or less if there is shallow bedrock). If you are intersted in classifying a soil according to the keys of soil taxonomy, a more elaborate excavation must be conducted. I'll not be giving advice on that front, rather I this is aimed to help more targeted sampling efforts.
+
+####How many?
+Soil is very heterogenous so expecting low effect sizes over space, and between treatments is a good place to start. See my discussion on [a priori tests of statistical power](power.html) to help decide how many samples you need. Suffice to say, you probably want more than the 3 required to make a standard deviation!
+
+####Active Biological Zone
+Commonly people will sample the top 10-15 centimeters of soils for microbial, nutrient, and carbon analysis. The reason is that this depth has been determined as the most active zone for biological cycling, thus different ecosystem types, or imposed treatments that may impact soil carbon, nitrogen, phosphorous cyling, may be most likely to generate an impact on this zone. Naturally, this will have an impact on the microbial community responsible for that cycling, and potentially on associated soil physical properties (e.g. water holding capacity, infiltration).
+
+####Rooting Zone
+If you want to go a little deeper and understand the impact of soil on water availability at a site, you may want to do some research as to the rooting depths and strategies of the plants in the area. If big trees are involved, naturally you can't excavate or auger many meters down, but as clay content of a soil is largely responsible for its surface area, and resultant water holding capacity, it is worth augering down as close to 2 meters as possible since most of the clay is likely in that zone, and it may be a good proxy for understanding the overall soil water capacity. Identifying depth increments is then required, and should be done as an educated guess (e.g. in the U.S.A. check out [soilweb](https://casoilresource.lawr.ucdavis.edu/gmap/), which is also available as an app), or by digging a real soil pit, identifying depths of important soil horizons, and then sampling accordingly.
+
+####Impacts of topography
+It is worth thinking about how topography impacts soil sampling and either controlling for it, or sampling many locations within the local topography. The top of a hill tends to be an eroding area, while the valley, or gulley below tends to be a place of accumulation. This also relates to infiltration of water based on that surface topography, making for differing rates of pedogenesis within short distances. For example, the top of a hill to the bottom flat area, could have shallow rocky, and deep clayey soils as a result of this weathering gradient. For a brief discussion on the topic, check out the wikipedia page on '[catenas](https://en.wikipedia.org/wiki/Catena_(soil))', the formal name for this landform and concept. 
+
+####Exploratory Sampling
+Commonly I have sampled 0-15, 15-30, 30-60, 60-100, 100-150, 150-200 cm in soil profiles. This has served me well in cases where I was just trying to get an idea of a site, and generate some exploratory data. It catches the surface horizons, clay rich horizons, and helps estimate soil depth (do I hit bedrock, or consolidated bedrock at or before 200 cm?).

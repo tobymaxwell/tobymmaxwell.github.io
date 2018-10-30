@@ -1,0 +1,29 @@
+name: "Toby Maxwell"
+output_dir: "."
+navbar:
+  title: "Toby Maxwell"
+  left:
+    - text: "About Me"
+      href: about.html
+    - text: "Current Projects"
+      href: projects.html
+    - text: "Publications"
+      href: pubs.html
+    - text: "CV"
+      href: https://tobymaxwell.github.io/files/CV.pdf
+    - text: "Methods"
+      href: methods.html
+
+  right:
+    - icon: fa-envelope fa-lg
+      href: contact.html
+    - icon: fa-twitter fa-lg
+      href: https://twitter.com/tobymmaxwell
+    - icon: fa-linkedin fa-lg
+      href: https://www.linkedin.com/in/toby-maxwell-18aa195b/
+    - icon: fa-github fa-lg
+      href: http://github.com/eeooo4
+output:
+  html_document:
+    theme: paper
+    css: 'styles.css'

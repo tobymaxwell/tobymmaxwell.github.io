@@ -1,0 +1,600 @@
+******************************************************************************
+
+MODIS Mosaic Tool (v4.1 March 2009)
+Start Time:  Tue Oct 30 15:04:57 2018
+
+------------------------------------------------------------------
+
+Input filenames (4):
+   /Users/Maxwell/Documents/GitHub/tobymmaxwell.github.io/MOD13A3.A2016001.h08v04.006.2016035114955.hdf
+   /Users/Maxwell/Documents/GitHub/tobymmaxwell.github.io/MOD13A3.A2016001.h09v04.006.2016035115004.hdf
+   /Users/Maxwell/Documents/GitHub/tobymmaxwell.github.io/MOD13A3.A2016001.h08v04.006.2016035114955.hdf
+   /Users/Maxwell/Documents/GitHub/tobymmaxwell.github.io/MOD13A3.A2016001.h09v04.006.2016035115004.hdf
+Output filename: /Users/Maxwell/Documents/GitHub/tobymmaxwell.github.io/Mosaic_2016-01-01.hdf
+Mosaic Array:
+   file[ 2]  file[ 3]
+
+Mosaic : processing band 1 km monthly NDVI
+
+Output mosaic image info
+------------------------
+output image corners (lat/lon):
+    UL:  49.999999995507 -155.572382657536 
+    UR:  49.999999995507 -124.457906126020 
+    LL:  39.999999996411 -130.540728914647 
+    LR:  39.999999996411 -104.432583131711 
+
+output image corners (X-Y projection units):
+    UL:  -11119505.196667000651 5559752.598333000205 
+    UR:  -8895604.157332999632 5559752.598333000205 
+    LL:  -11119505.196667000651 4447802.078666999936 
+    LR:  -8895604.157332999632 4447802.078666999936 
+
+     band               type lines smpls pixsiz      min    max   fill
+  1) 1 km monthly NDVI  INT16  1200  2400 926.6254  -2000  10000  -3000
+
+End Time:  Tue Oct 30 15:04:58 2018
+
+Finished mosaicking!
+
+******************************************************************************
+
+******************************************************************************
+
+MODIS Reprojection Tool (v4.1 March 2009)
+Start Time:  Tue Oct 30 15:04:58 2018
+
+------------------------------------------------------------------
+
+
+Input image and reprojection info
+---------------------------------
+input_filename:          /Users/Maxwell/Documents/GitHub/tobymmaxwell.github.io/Mosaic_2016-01-01.hdf
+output_filename:         MOD13A3_2016-01-01.tif
+input_filetype:          HDF-EOS
+output_filetype:         GEOTIFF
+input_projection_type:   SIN
+input_datum:             WGS84
+output_projection_type:  UTM
+output_zone_code:        11
+output_datum:            WGS84
+resampling_type:         NN
+input projection parameters:  6371007.18 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 
+output projection parameters: 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 
+
+input image corners (lat/lon):
+    UL:  50.00 -155.57 
+    UR:  50.00 -124.46 
+    LL:  40.00 -130.54 
+    LR:  40.00 -104.43 
+
+input image spatial subset corners (lat/lon):
+    UL:  50.00 -155.57 
+    UR:  50.00 -124.46 
+    LL:  40.00 -130.54 
+    LR:  40.00 -104.43 
+
+     band          select   type lines smpls pixsiz      min    max   fill
+  1) 1 km monthly NDVI   1  INT16  1200  2400 926.6254  -2000  10000  -3000
+
+
+SINUSOIDAL PROJECTION PARAMETERS:
+
+   Radius of Sphere:     6371007.181000 meters
+   Longitude of Center:     0.000000 degrees
+   False Easting:      0.000000 meters 
+   False Northing:     0.000000 meters 
+
+UNIVERSAL TRANSVERSE MERCATOR (UTM) PROJECTION PARAMETERS:
+
+   Zone:      11
+   Semi-Major Axis of Ellipsoid:     6378137.000000 meters
+   Semi-Minor Axis of Ellipsoid:     6356752.314245 meters
+   Scale Factor at C. Meridian:      0.999600
+   Longitude of Central Meridian:     -117.000000 degrees
+
+NNResample : processing band 1 km monthly NDVI
+
+Output image info
+-----------------
+output image extents (lat/lon):
+    UL:  49.911895491828 -156.237446555868 
+    UR:  55.553398365442 -99.890611808336 
+    LL:  36.048068026485 -146.794196932454 
+    LR:  39.328241307835 -104.566262761934 
+
+output image extents (X-Y projection units):
+    UL:  -2213213.927340871189 6290156.056576264091 
+    UR:  1573286.072659128811 6290156.056576264091 
+    LL:  -2213213.927340871189 4427656.056576264091 
+    LR:  1573286.072659128811 4427656.056576264091 
+
+     band               type lines smpls pixsiz      min    max   fill
+  1) 1 km monthly NDVI  INT16  7450 15146 250.0000  -2000  10000  -3000
+
+End Time:  Tue Oct 30 15:06:11 2018
+
+Finished processing!
+
+******************************************************************************
+
+******************************************************************************
+
+MODIS Mosaic Tool (v4.1 March 2009)
+Start Time:  Tue Oct 30 15:06:11 2018
+
+------------------------------------------------------------------
+
+Input filenames (4):
+   /Users/Maxwell/Documents/GitHub/tobymmaxwell.github.io/MOD13A3.A2016032.h08v04.006.2016109133834.hdf
+   /Users/Maxwell/Documents/GitHub/tobymmaxwell.github.io/MOD13A3.A2016032.h09v04.006.2016109133845.hdf
+   /Users/Maxwell/Documents/GitHub/tobymmaxwell.github.io/MOD13A3.A2016032.h08v04.006.2016109133834.hdf
+   /Users/Maxwell/Documents/GitHub/tobymmaxwell.github.io/MOD13A3.A2016032.h09v04.006.2016109133845.hdf
+Output filename: /Users/Maxwell/Documents/GitHub/tobymmaxwell.github.io/Mosaic_2016-02-01.hdf
+Mosaic Array:
+   file[ 2]  file[ 3]
+
+Mosaic : processing band 1 km monthly NDVI
+
+Output mosaic image info
+------------------------
+output image corners (lat/lon):
+    UL:  49.999999995507 -155.572382657536 
+    UR:  49.999999995507 -124.457906126020 
+    LL:  39.999999996411 -130.540728914647 
+    LR:  39.999999996411 -104.432583131711 
+
+output image corners (X-Y projection units):
+    UL:  -11119505.196667000651 5559752.598333000205 
+    UR:  -8895604.157332999632 5559752.598333000205 
+    LL:  -11119505.196667000651 4447802.078666999936 
+    LR:  -8895604.157332999632 4447802.078666999936 
+
+     band               type lines smpls pixsiz      min    max   fill
+  1) 1 km monthly NDVI  INT16  1200  2400 926.6254  -2000  10000  -3000
+
+End Time:  Tue Oct 30 15:06:12 2018
+
+Finished mosaicking!
+
+******************************************************************************
+
+******************************************************************************
+
+MODIS Reprojection Tool (v4.1 March 2009)
+Start Time:  Tue Oct 30 15:06:12 2018
+
+------------------------------------------------------------------
+
+
+Input image and reprojection info
+---------------------------------
+input_filename:          /Users/Maxwell/Documents/GitHub/tobymmaxwell.github.io/Mosaic_2016-02-01.hdf
+output_filename:         MOD13A3_2016-02-01.tif
+input_filetype:          HDF-EOS
+output_filetype:         GEOTIFF
+input_projection_type:   SIN
+input_datum:             WGS84
+output_projection_type:  UTM
+output_zone_code:        11
+output_datum:            WGS84
+resampling_type:         NN
+input projection parameters:  6371007.18 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 
+output projection parameters: 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 
+
+input image corners (lat/lon):
+    UL:  50.00 -155.57 
+    UR:  50.00 -124.46 
+    LL:  40.00 -130.54 
+    LR:  40.00 -104.43 
+
+input image spatial subset corners (lat/lon):
+    UL:  50.00 -155.57 
+    UR:  50.00 -124.46 
+    LL:  40.00 -130.54 
+    LR:  40.00 -104.43 
+
+     band          select   type lines smpls pixsiz      min    max   fill
+  1) 1 km monthly NDVI   1  INT16  1200  2400 926.6254  -2000  10000  -3000
+
+
+SINUSOIDAL PROJECTION PARAMETERS:
+
+   Radius of Sphere:     6371007.181000 meters
+   Longitude of Center:     0.000000 degrees
+   False Easting:      0.000000 meters 
+   False Northing:     0.000000 meters 
+
+UNIVERSAL TRANSVERSE MERCATOR (UTM) PROJECTION PARAMETERS:
+
+   Zone:      11
+   Semi-Major Axis of Ellipsoid:     6378137.000000 meters
+   Semi-Minor Axis of Ellipsoid:     6356752.314245 meters
+   Scale Factor at C. Meridian:      0.999600
+   Longitude of Central Meridian:     -117.000000 degrees
+
+NNResample : processing band 1 km monthly NDVI
+
+Output image info
+-----------------
+output image extents (lat/lon):
+    UL:  49.911895491828 -156.237446555868 
+    UR:  55.553398365442 -99.890611808336 
+    LL:  36.048068026485 -146.794196932454 
+    LR:  39.328241307835 -104.566262761934 
+
+output image extents (X-Y projection units):
+    UL:  -2213213.927340871189 6290156.056576264091 
+    UR:  1573286.072659128811 6290156.056576264091 
+    LL:  -2213213.927340871189 4427656.056576264091 
+    LR:  1573286.072659128811 4427656.056576264091 
+
+     band               type lines smpls pixsiz      min    max   fill
+  1) 1 km monthly NDVI  INT16  7450 15146 250.0000  -2000  10000  -3000
+
+End Time:  Tue Oct 30 15:07:25 2018
+
+Finished processing!
+
+******************************************************************************
+
+******************************************************************************
+
+MODIS Mosaic Tool (v4.1 March 2009)
+Start Time:  Tue Oct 30 15:07:25 2018
+
+------------------------------------------------------------------
+
+Input filenames (4):
+   /Users/Maxwell/Documents/GitHub/tobymmaxwell.github.io/MOD13A3.A2016061.h08v04.006.2016110163104.hdf
+   /Users/Maxwell/Documents/GitHub/tobymmaxwell.github.io/MOD13A3.A2016061.h09v04.006.2016110163144.hdf
+   /Users/Maxwell/Documents/GitHub/tobymmaxwell.github.io/MOD13A3.A2016061.h08v04.006.2016110163104.hdf
+   /Users/Maxwell/Documents/GitHub/tobymmaxwell.github.io/MOD13A3.A2016061.h09v04.006.2016110163144.hdf
+Output filename: /Users/Maxwell/Documents/GitHub/tobymmaxwell.github.io/Mosaic_2016-03-01.hdf
+Mosaic Array:
+   file[ 2]  file[ 3]
+
+Mosaic : processing band 1 km monthly NDVI
+
+Output mosaic image info
+------------------------
+output image corners (lat/lon):
+    UL:  49.999999995507 -155.572382657536 
+    UR:  49.999999995507 -124.457906126020 
+    LL:  39.999999996411 -130.540728914647 
+    LR:  39.999999996411 -104.432583131711 
+
+output image corners (X-Y projection units):
+    UL:  -11119505.196667000651 5559752.598333000205 
+    UR:  -8895604.157332999632 5559752.598333000205 
+    LL:  -11119505.196667000651 4447802.078666999936 
+    LR:  -8895604.157332999632 4447802.078666999936 
+
+     band               type lines smpls pixsiz      min    max   fill
+  1) 1 km monthly NDVI  INT16  1200  2400 926.6254  -2000  10000  -3000
+
+End Time:  Tue Oct 30 15:07:26 2018
+
+Finished mosaicking!
+
+******************************************************************************
+
+******************************************************************************
+
+MODIS Reprojection Tool (v4.1 March 2009)
+Start Time:  Tue Oct 30 15:07:26 2018
+
+------------------------------------------------------------------
+
+
+Input image and reprojection info
+---------------------------------
+input_filename:          /Users/Maxwell/Documents/GitHub/tobymmaxwell.github.io/Mosaic_2016-03-01.hdf
+output_filename:         MOD13A3_2016-03-01.tif
+input_filetype:          HDF-EOS
+output_filetype:         GEOTIFF
+input_projection_type:   SIN
+input_datum:             WGS84
+output_projection_type:  UTM
+output_zone_code:        11
+output_datum:            WGS84
+resampling_type:         NN
+input projection parameters:  6371007.18 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 
+output projection parameters: 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 
+
+input image corners (lat/lon):
+    UL:  50.00 -155.57 
+    UR:  50.00 -124.46 
+    LL:  40.00 -130.54 
+    LR:  40.00 -104.43 
+
+input image spatial subset corners (lat/lon):
+    UL:  50.00 -155.57 
+    UR:  50.00 -124.46 
+    LL:  40.00 -130.54 
+    LR:  40.00 -104.43 
+
+     band          select   type lines smpls pixsiz      min    max   fill
+  1) 1 km monthly NDVI   1  INT16  1200  2400 926.6254  -2000  10000  -3000
+
+
+SINUSOIDAL PROJECTION PARAMETERS:
+
+   Radius of Sphere:     6371007.181000 meters
+   Longitude of Center:     0.000000 degrees
+   False Easting:      0.000000 meters 
+   False Northing:     0.000000 meters 
+
+UNIVERSAL TRANSVERSE MERCATOR (UTM) PROJECTION PARAMETERS:
+
+   Zone:      11
+   Semi-Major Axis of Ellipsoid:     6378137.000000 meters
+   Semi-Minor Axis of Ellipsoid:     6356752.314245 meters
+   Scale Factor at C. Meridian:      0.999600
+   Longitude of Central Meridian:     -117.000000 degrees
+
+NNResample : processing band 1 km monthly NDVI
+
+Output image info
+-----------------
+output image extents (lat/lon):
+    UL:  49.911895491828 -156.237446555868 
+    UR:  55.553398365442 -99.890611808336 
+    LL:  36.048068026485 -146.794196932454 
+    LR:  39.328241307835 -104.566262761934 
+
+output image extents (X-Y projection units):
+    UL:  -2213213.927340871189 6290156.056576264091 
+    UR:  1573286.072659128811 6290156.056576264091 
+    LL:  -2213213.927340871189 4427656.056576264091 
+    LR:  1573286.072659128811 4427656.056576264091 
+
+     band               type lines smpls pixsiz      min    max   fill
+  1) 1 km monthly NDVI  INT16  7450 15146 250.0000  -2000  10000  -3000
+
+End Time:  Tue Oct 30 15:08:39 2018
+
+Finished processing!
+
+******************************************************************************
+
+******************************************************************************
+
+MODIS Mosaic Tool (v4.1 March 2009)
+Start Time:  Tue Oct 30 15:08:39 2018
+
+------------------------------------------------------------------
+
+Input filenames (4):
+   /Users/Maxwell/Documents/GitHub/tobymmaxwell.github.io/MOD13A3.A2016092.h08v04.006.2016130115953.hdf
+   /Users/Maxwell/Documents/GitHub/tobymmaxwell.github.io/MOD13A3.A2016092.h09v04.006.2016130115750.hdf
+   /Users/Maxwell/Documents/GitHub/tobymmaxwell.github.io/MOD13A3.A2016092.h08v04.006.2016130115953.hdf
+   /Users/Maxwell/Documents/GitHub/tobymmaxwell.github.io/MOD13A3.A2016092.h09v04.006.2016130115750.hdf
+Output filename: /Users/Maxwell/Documents/GitHub/tobymmaxwell.github.io/Mosaic_2016-04-01.hdf
+Mosaic Array:
+   file[ 2]  file[ 3]
+
+Mosaic : processing band 1 km monthly NDVI
+
+Output mosaic image info
+------------------------
+output image corners (lat/lon):
+    UL:  49.999999995507 -155.572382657536 
+    UR:  49.999999995507 -124.457906126020 
+    LL:  39.999999996411 -130.540728914647 
+    LR:  39.999999996411 -104.432583131711 
+
+output image corners (X-Y projection units):
+    UL:  -11119505.196667000651 5559752.598333000205 
+    UR:  -8895604.157332999632 5559752.598333000205 
+    LL:  -11119505.196667000651 4447802.078666999936 
+    LR:  -8895604.157332999632 4447802.078666999936 
+
+     band               type lines smpls pixsiz      min    max   fill
+  1) 1 km monthly NDVI  INT16  1200  2400 926.6254  -2000  10000  -3000
+
+End Time:  Tue Oct 30 15:08:40 2018
+
+Finished mosaicking!
+
+******************************************************************************
+
+******************************************************************************
+
+MODIS Reprojection Tool (v4.1 March 2009)
+Start Time:  Tue Oct 30 15:08:40 2018
+
+------------------------------------------------------------------
+
+
+Input image and reprojection info
+---------------------------------
+input_filename:          /Users/Maxwell/Documents/GitHub/tobymmaxwell.github.io/Mosaic_2016-04-01.hdf
+output_filename:         MOD13A3_2016-04-01.tif
+input_filetype:          HDF-EOS
+output_filetype:         GEOTIFF
+input_projection_type:   SIN
+input_datum:             WGS84
+output_projection_type:  UTM
+output_zone_code:        11
+output_datum:            WGS84
+resampling_type:         NN
+input projection parameters:  6371007.18 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 
+output projection parameters: 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 
+
+input image corners (lat/lon):
+    UL:  50.00 -155.57 
+    UR:  50.00 -124.46 
+    LL:  40.00 -130.54 
+    LR:  40.00 -104.43 
+
+input image spatial subset corners (lat/lon):
+    UL:  50.00 -155.57 
+    UR:  50.00 -124.46 
+    LL:  40.00 -130.54 
+    LR:  40.00 -104.43 
+
+     band          select   type lines smpls pixsiz      min    max   fill
+  1) 1 km monthly NDVI   1  INT16  1200  2400 926.6254  -2000  10000  -3000
+
+
+SINUSOIDAL PROJECTION PARAMETERS:
+
+   Radius of Sphere:     6371007.181000 meters
+   Longitude of Center:     0.000000 degrees
+   False Easting:      0.000000 meters 
+   False Northing:     0.000000 meters 
+
+UNIVERSAL TRANSVERSE MERCATOR (UTM) PROJECTION PARAMETERS:
+
+   Zone:      11
+   Semi-Major Axis of Ellipsoid:     6378137.000000 meters
+   Semi-Minor Axis of Ellipsoid:     6356752.314245 meters
+   Scale Factor at C. Meridian:      0.999600
+   Longitude of Central Meridian:     -117.000000 degrees
+
+NNResample : processing band 1 km monthly NDVI
+
+Output image info
+-----------------
+output image extents (lat/lon):
+    UL:  49.911895491828 -156.237446555868 
+    UR:  55.553398365442 -99.890611808336 
+    LL:  36.048068026485 -146.794196932454 
+    LR:  39.328241307835 -104.566262761934 
+
+output image extents (X-Y projection units):
+    UL:  -2213213.927340871189 6290156.056576264091 
+    UR:  1573286.072659128811 6290156.056576264091 
+    LL:  -2213213.927340871189 4427656.056576264091 
+    LR:  1573286.072659128811 4427656.056576264091 
+
+     band               type lines smpls pixsiz      min    max   fill
+  1) 1 km monthly NDVI  INT16  7450 15146 250.0000  -2000  10000  -3000
+
+End Time:  Tue Oct 30 15:09:53 2018
+
+Finished processing!
+
+******************************************************************************
+
+******************************************************************************
+
+MODIS Mosaic Tool (v4.1 March 2009)
+Start Time:  Tue Oct 30 15:09:53 2018
+
+------------------------------------------------------------------
+
+Input filenames (4):
+   /Users/Maxwell/Documents/GitHub/tobymmaxwell.github.io/MOD13A3.A2016122.h08v04.006.2016166144449.hdf
+   /Users/Maxwell/Documents/GitHub/tobymmaxwell.github.io/MOD13A3.A2016122.h09v04.006.2016166144453.hdf
+   /Users/Maxwell/Documents/GitHub/tobymmaxwell.github.io/MOD13A3.A2016122.h08v04.006.2016166144449.hdf
+   /Users/Maxwell/Documents/GitHub/tobymmaxwell.github.io/MOD13A3.A2016122.h09v04.006.2016166144453.hdf
+Output filename: /Users/Maxwell/Documents/GitHub/tobymmaxwell.github.io/Mosaic_2016-05-01.hdf
+Mosaic Array:
+   file[ 2]  file[ 3]
+
+Mosaic : processing band 1 km monthly NDVI
+
+Output mosaic image info
+------------------------
+output image corners (lat/lon):
+    UL:  49.999999995507 -155.572382657536 
+    UR:  49.999999995507 -124.457906126020 
+    LL:  39.999999996411 -130.540728914647 
+    LR:  39.999999996411 -104.432583131711 
+
+output image corners (X-Y projection units):
+    UL:  -11119505.196667000651 5559752.598333000205 
+    UR:  -8895604.157332999632 5559752.598333000205 
+    LL:  -11119505.196667000651 4447802.078666999936 
+    LR:  -8895604.157332999632 4447802.078666999936 
+
+     band               type lines smpls pixsiz      min    max   fill
+  1) 1 km monthly NDVI  INT16  1200  2400 926.6254  -2000  10000  -3000
+
+End Time:  Tue Oct 30 15:09:53 2018
+
+Finished mosaicking!
+
+******************************************************************************
+
+******************************************************************************
+
+MODIS Reprojection Tool (v4.1 March 2009)
+Start Time:  Tue Oct 30 15:09:53 2018
+
+------------------------------------------------------------------
+
+
+Input image and reprojection info
+---------------------------------
+input_filename:          /Users/Maxwell/Documents/GitHub/tobymmaxwell.github.io/Mosaic_2016-05-01.hdf
+output_filename:         MOD13A3_2016-05-01.tif
+input_filetype:          HDF-EOS
+output_filetype:         GEOTIFF
+input_projection_type:   SIN
+input_datum:             WGS84
+output_projection_type:  UTM
+output_zone_code:        11
+output_datum:            WGS84
+resampling_type:         NN
+input projection parameters:  6371007.18 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 
+output projection parameters: 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 
+
+input image corners (lat/lon):
+    UL:  50.00 -155.57 
+    UR:  50.00 -124.46 
+    LL:  40.00 -130.54 
+    LR:  40.00 -104.43 
+
+input image spatial subset corners (lat/lon):
+    UL:  50.00 -155.57 
+    UR:  50.00 -124.46 
+    LL:  40.00 -130.54 
+    LR:  40.00 -104.43 
+
+     band          select   type lines smpls pixsiz      min    max   fill
+  1) 1 km monthly NDVI   1  INT16  1200  2400 926.6254  -2000  10000  -3000
+
+
+SINUSOIDAL PROJECTION PARAMETERS:
+
+   Radius of Sphere:     6371007.181000 meters
+   Longitude of Center:     0.000000 degrees
+   False Easting:      0.000000 meters 
+   False Northing:     0.000000 meters 
+
+UNIVERSAL TRANSVERSE MERCATOR (UTM) PROJECTION PARAMETERS:
+
+   Zone:      11
+   Semi-Major Axis of Ellipsoid:     6378137.000000 meters
+   Semi-Minor Axis of Ellipsoid:     6356752.314245 meters
+   Scale Factor at C. Meridian:      0.999600
+   Longitude of Central Meridian:     -117.000000 degrees
+
+NNResample : processing band 1 km monthly NDVI
+
+Output image info
+-----------------
+output image extents (lat/lon):
+    UL:  49.911895491828 -156.237446555868 
+    UR:  55.553398365442 -99.890611808336 
+    LL:  36.048068026485 -146.794196932454 
+    LR:  39.328241307835 -104.566262761934 
+
+output image extents (X-Y projection units):
+    UL:  -2213213.927340871189 6290156.056576264091 
+    UR:  1573286.072659128811 6290156.056576264091 
+    LL:  -2213213.927340871189 4427656.056576264091 
+    LR:  1573286.072659128811 4427656.056576264091 
+
+     band               type lines smpls pixsiz      min    max   fill
+  1) 1 km monthly NDVI  INT16  7450 15146 250.0000  -2000  10000  -3000
+
+End Time:  Tue Oct 30 15:11:06 2018
+
+Finished processing!
+
+******************************************************************************
+

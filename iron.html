@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Soil Iron Mineral Extractions</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 64px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+
+.section h2 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h3 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h4 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h5 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h6 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Toby Maxwell</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="about.html">About Me</a>
+</li>
+<li>
+  <a href="projects.html">Current Projects</a>
+</li>
+<li>
+  <a href="pubs.html">Publications</a>
+</li>
+<li>
+  <a href="https://tobymaxwell.github.io/files/CV.pdf">CV</a>
+</li>
+<li>
+  <a href="methods.html">Methods</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="contact.html">
+    <span class="fa fa-envelope fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://twitter.com/tobymmaxwell">
+    <span class="fa fa-twitter fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://www.linkedin.com/in/toby-maxwell-18aa195b/">
+    <span class="fa fa-linkedin fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="http://github.com/eeooo4">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Soil Iron Mineral Extractions</h1>
+
+</div>
+
+
+<div id="selective-dissolution-of-soil-iron-for-mineralogical-and-microbiological-evaluation" class="section level5">
+<h5>Selective dissolution of soil iron for mineralogical and microbiological evaluation</h5>
+<p>These reagents extract different fractions of iron as indicated, but no extractant is perfect, and depending on the soil there is some overlap, i.e. a small amount of another iron fraction may be extracted at the same time. Further, every soil may require calibration as the various mineral fractions can vary by orders of magniude among soils. As a result, small pilot experiments should be done prior to extraction a whole sample set, to ensure accuracy and also save time.</p>
+<p>But how to do those pilots? I’ll provide some numbers to start with here, and if I were to calibrate for a new soil, I’d extract with maybe +/- 50% of the reactants. Then see if the results come out the same, and you can adjust accordingly, i.e. if 50% more gives a different result, you’ll need to add even more until the result plateaus, so you know you have run a reaction to completion. You will also save time in the end by doing this because in the end your UV-VIS analysis may show that you need to adjust the expected concentrations to get a good number.</p>
+</div>
+<div id="blanks" class="section level5">
+<h5>Blanks</h5>
+<p>Just a quick note on blanks. Procedures like this can get contaminated by any number of things no matter how clean you try to be, of course it is necessary to clean glassware and reaction vials/tubes well, however, to account for any contaminations, or leaching, you want to run <strong>method blanks</strong>. These are treated exactly as a sample, except no sample is added. At the end, whatever concentration is ‘measured’ for iron in this extract is added or subtracted from the final value. This sets the Zero value.</p>
+<p>In addition to a method blank for the extractants, you will also need a blank for the ferrozine solution here. So by the end youll have 3 or 4 method blanks, and then at the analysis phase 3 or 4 reagent blanks simply analyzing water rather than extractant. This can significantly shift the baseline values of an experiment and must be done.</p>
+</div>
+<div id="extraction-descriptions" class="section level5">
+<h5>Extraction Descriptions</h5>
+<ol style="list-style-type: decimal">
+<li>Pyrophosphate extraction – removes iron present in organic-metal complexes (complexed with soil organic matter).<br />
+</li>
+<li>Dithionite extraction – reduces and extracts Fe(III) in secondary minerals such as goethite, hematite, and ferrihydrite; also removes aluminum and silicon from some short-range order aluminosilicates</li>
+<li>Oxalate extraction – extracts iron from ferrihydrite and other short-range order oxyhydroxides. Includes all amorphous Fe(III) potentially available for microbial reduction, but is not necessarily a good indicator of the true amount of Fe(III) available for microbial reduction, since poorly reducible forms of Fe(III) are also extracted. Also dissolves short-range order aluminosilicates and extracts some iron and aluminum from organic complexes.</li>
+<li>Dilute acid – a measure of the Fe(II) produced during reduction of Fe(III)</li>
+<li>Hydroxylamine – selective extractant for microbially reducible Fe(III)</li>
+</ol>
+</div>
+<div id="extraction-procedures" class="section level5">
+<h5>Extraction Procedures</h5>
+<p>Extractions can be done in 50 mL centrifuge tubes, convenient for shaking, reacting, and settling.</p>
+<ol style="list-style-type: decimal">
+<li><p>Pyrophosphate: Extract 0.5 g soil for 16 hours with 45 ml 0.1 M tetrasodium pyrophosphate. Centrifuge at 15600 x G for 30 minutes or until fine colloids are removed.</p></li>
+<li><p>Dithionite: To 50 mg soil add 20 ml 0.3 M sodium citrate and 2.5 mL 1M Sodium Bicarbonate. Shake to mix. Heat in a water bath until solutions are 75-80°C. Stir immediately for 1 minute then return to water bath and shake a few more times over the next 5 minutes. Remove again, and add 0.5 g additional dithionite. Stir well, and then return to heat and shake several times over the next 10 minutes. If the soil was red, there should be no color left. Allow to cool to room temperature and centrifuge. If supernatant is cloudy, add 5 mL saturated NaCl and 5 mL acetone to flocculate. Shake, and re-centrifuge at 5000x G for 10 minutes. Dilute to a known volume before analysis. This procedure worked well for reasonably high Fe, highly weathered ultisols and alfisols. An agricultural loamy soil may require around 5 grams of soil with similar reagent volumes.</p></li>
+<li><p>Oxalate:To make the oxalate solution mix 16.2 g ammonium oxalate monohydrate and 10.8 g oxalic acid monohydrate per liter of water. Adjust the pH to 3.0 with either ammonium oxalate (increase pH) or oxalic acid (decrease pH). Watch out, it takes forever for pH to equilibrate and it changes exponentially more quickly the closer the solution pH gets to the pKa. Do this slowly with small additions and something else to do while you wait. To extract: To 0.5 g soil add 50 ml ammonium oxalate solution (buffered at pH 3.0). Shake for 4 hours in the dark, but not longer. (light affects dissolution of iron in the presence of oxalate). If you have high short range order concentrations try 0.25 g soil to 50 mL.</p></li>
+<li><p>Dilute acid: usually 1 g soil plus 50 ml 0.5 M HCl. Lovley and Phillips 1986. Appl Env Microb 51:683</p></li>
+<li><p>Hydroxylamine: to 1 g soil add 50 ml 0.25 M hydroxylamine hydrochloride in 0.25 M HCl (per liter: 17.4 g hydroxylamine hydrochloride and 20.8 ml concentrated HCl). Shake for one hour. Lovley and Phillips 1987. Appl Env Microb 53:1536.</p></li>
+</ol>
+</div>
+<div id="making-standard-solutions" class="section level5">
+<h5>Making Standard Solutions</h5>
+<p>Ferrozine Solution: Add 3 grams Ammonium Acetate and 1 g ferrozine to 50 mL water in a 100 mL volumetric flask. Dilute to 100 mL after dissolved. Add 0.2 g ascorbic acid just before analysis. Ferrozine Blank: Same as above, just without ferrozine.</p>
+<p>Standards: Ferrous Ammonium Sulfate Hexahydrate (FeAmSu)can be used as a standard. Fe(NH4)2(SO4)2 6H2O, FW: 392.15g/mol, Fe is 55.8g/mol. Easiest to make a stock solution and then standards as appropriate. For me, the range of 0.2 mg/L-10mg/L covered all of my samples nicely. To make a 274 mg/L stock solution add 1.96 grams of FeAmSu to 500 mL water in a 1 L volumetric flask. Add 20 mL 6M HCl, and then dilute to 1 L. Dilute to necessary quantities, and before anything calculate how much you will need so that you are using only 1 batch of standard and ferrozine solution per round of analysis (this just makes it easier, fewer blanks are involved).</p>
+<pre class="r"><code>#remember M1V1=M2V2? Just proportional dilutions.
+##Here&#39;s how much of that 274 ppm stock is required to make 100 mL of a 10 ppm standard, can repeat for other standrards.
+M1&lt;-274
+V2&lt;-100
+M2&lt;-10
+V1&lt;-function(M1, V2, M2){(M2*V2)/M1}
+V1(M1,V2,M2)</code></pre>
+<pre><code>## [1] 3.649635</code></pre>
+</div>
+<div id="determination-of-iron-in-oxalate-acid-or-hydroxylamine-extracts" class="section level5">
+<h5>Determination of iron in oxalate, acid, or hydroxylamine extracts</h5>
+<p>Prepare the reagent (from Dominik and Kaupenjohann 2000. Talanta 51:701): Into cuvets, pipet 0.2 ml sample or standard, then add 0.8 ml reagent. Cap, mix, and wait until color is fully developed. This is usually within an hour, but it is good to confirm. The color is stable until the next day. Read absorbance at 565 nm. The working range is about 0.2 to 10 mg/L.</p>
+</div>
+<div id="determination-of-iron-in-pyrophosphate-and-dithionite-extracts" class="section level4">
+<h4>Determination of iron in pyrophosphate and dithionite extracts</h4>
+<p>Pipet 0.2 ml sample or standard into cuvettes. Add 0.04 ml 6 M HCl to neutralize. If the samples have been diluted with water, add proportionally less HCl. Add 0.04 ml water to the standards if they are not made in a pyrophosphate matrix; if they are made in pyrophosphate, add 0.04 ml HCl. Then add 0.8 ml reagent (same as above analysis), mix, and read absorbance at 565 nm once color is fully developed. Do not wait until the next day – some iron may begin to precipitate. If the samples are heavily colored, prepare a corresponding correction sample for each sample by using a reagent without ferrozine; subtract the absorbance from this sample (the background absorbance) from the absorbance of the samples with iron color developed.</p>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Carbon and Nitrogen</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 64px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+
+.section h2 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h3 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h4 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h5 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h6 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Toby Maxwell</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="about.html">About Me</a>
+</li>
+<li>
+  <a href="projects.html">Current Projects</a>
+</li>
+<li>
+  <a href="pubs.html">Publications</a>
+</li>
+<li>
+  <a href="https://tobymaxwell.github.io/files/CV.pdf">CV</a>
+</li>
+<li>
+  <a href="methods.html">Methods</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="contact.html">
+    <span class="fa fa-envelope fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://twitter.com/tobymmaxwell">
+    <span class="fa fa-twitter fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://www.linkedin.com/in/toby-maxwell-18aa195b/">
+    <span class="fa fa-linkedin fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="http://github.com/eeooo4">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Carbon and Nitrogen</h1>
+
+</div>
+
+
+<div id="sample-preparation" class="section level3">
+<h3>Sample preparation</h3>
+<p>A very small amount (2-10 mg) of a sample will be used for total carbon and nitrogen analysis. As a result, samples must be well homogenized. Depending on the amount of sample you have this can be done in a number of ways. After drying you can</p>
+<ol style="list-style-type: decimal">
+<li>Mortar and pestle with liquid nitrogen</li>
+<li>Grind in a coffee grinder</li>
+<li>Powder in a ball mill</li>
+</ol>
+<p>If the first two are your option, then you may want to pass the sample through a #40 sieve (425 micron) to assure consistent measurements.</p>
+<p>After grinding samples then need to be packaged into tin capsules and weighed on a micro balance to 0.001 mg accuracy.</p>
+<p>A note at this point, if you are measuring soils with carbonates present this will interfere with the analysis. You need to follow a separate procedure, detailed in the <a href="http://stableisotopefacility.ucdavis.edu/articles/Harris%20ea%202001(Acid%20Fumigation).pdf">attached article by Harris et al.</a></p>
+</div>
+<div id="elemental-analysis" class="section level3">
+<h3>Elemental Analysis</h3>
+<p>Perhaps the most common analyzer is the Costech ECS 4010. This robust instrument combusts the tin capsule in a high oxygen environment at 1020°C. This causes the tin to combust, raising the sample temperature to about 1800C. In theory this rapid and high energy conversion quantitatively converts the material into gas, carbon is then completely oxidized by a chromium oxide catalyst, and nitrogen is left as N2 with and excess oxygen removed by reduced copper wires. Water is removed with magnesium perchlorate, and the gasses separated by a chromatographic column, and measured by a <a href="https://en.wikipedia.org/wiki/Thermal_conductivity_detector">thermal conductivity detector</a>. More information on the specifics of running a costech are available online, one good source is <a href="https://lter.kbs.msu.edu/protocols/148">here</a>.</p>
+</div>
+<div id="loss-on-ignition" class="section level3">
+<h3>Loss on Ignition</h3>
+<p>Another simpler way to estimate soil carbon is the loss on ignition method. This involves combustion of soil in an oven at 550°C to remove carbon - effectively combusting the carbon by conversion of complex organic matter to CO<sub>2</sub> and H<sub>2</sub>O. This is not quantitative as soil minerals will also begin to decompose, for example common soil minerals such as goethite, gibbsite and kaolinite will lose OH groups resulting in weight loss of a sample. This can be a good method for qualitative comparisons as it is robust, efficient, and simple.</p>
+<div id="materials" class="section level4">
+<h4>Materials</h4>
+<p>Muffle Furnace (or oven that can reach and sustain 550°C)<br />
+Crucibles<br />
+Scale</p>
+<p>How much soil is used depends on the organic matter content, and how sensitive your scale is. Think, if you have an agricultural soil with 1-2% organic matter, in a 20 gram sample you will have to measure a loss of only 0.2-0.4 grams.</p>
+</div>
+<div id="procedure" class="section level4">
+<h4>Procedure</h4>
+<p>Weigh crucible, add soil, weigh crucible with the soil, add to the oven and combust at 550°C for 3 hours.</p>
+<p>A more detailed description of the procedure, and parameterization of the concerns for mineral alterations can be read about in <a href="https://s3.amazonaws.com/academia.edu.documents/44088168/Estimating_soil_organic_carbon_through_l20160324-28196-w3id14.pdf?AWSAccessKeyId=AKIAIWOWYYGZ2Y53UL3A&amp;Expires=1529525147&amp;Signature=tngNbQh0MawmYpDVeTUckhX3IPQ%3D&amp;response-content-disposition=inline%3B%20filename%3DEstimating_soil_organic_carbon_through_l.pdf">this paper</a></p>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

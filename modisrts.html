@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title></title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 64px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+
+.section h2 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h3 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h4 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h5 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h6 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Toby Maxwell</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="about.html">About Me</a>
+</li>
+<li>
+  <a href="projects.html">Current Projects</a>
+</li>
+<li>
+  <a href="pubs.html">Publications</a>
+</li>
+<li>
+  <a href="https://tobymaxwell.github.io/files/CV.pdf">CV</a>
+</li>
+<li>
+  <a href="methods.html">Methods</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="contact.html">
+    <span class="fa fa-envelope fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://twitter.com/tobymmaxwell">
+    <span class="fa fa-twitter fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://www.linkedin.com/in/toby-maxwell-18aa195b/">
+    <span class="fa fa-linkedin fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="http://github.com/eeooo4">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+
+</div>
+
+
+<div id="bulk-downloads-of-space-and-time-targeted-modis-data" class="section level3">
+<h3>Bulk downloads of space and time targeted MODIS data</h3>
+<p>First thing you need to get the appropriate software installed, the <a href="https://lpdaac.usgs.gov/tools/modis_reprojection_tool">modis reprojection tool</a> is used by this package to process your data. It can be used outside of R too, but this automates the process.</p>
+<p>Then load packages, and set up your login and file path, followed by checking out what modis products are avaialble, and their appropriate codes.</p>
+<pre class="r"><code>library(raster)</code></pre>
+<pre><code>## Loading required package: sp</code></pre>
+<pre class="r"><code>library(rgeos)</code></pre>
+<pre><code>## rgeos version: 0.3-26, (SVN revision 560)
+##  GEOS runtime version: 3.4.2-CAPI-1.8.2 r3921 
+##  Linking to sp version: 1.2-5 
+##  Polygon checking: TRUE</code></pre>
+<pre class="r"><code>library(rgdal)</code></pre>
+<pre><code>## rgdal: version: 1.2-16, (SVN revision 701)
+##  Geospatial Data Abstraction Library extensions to R successfully loaded
+##  Loaded GDAL runtime: GDAL 2.1.2, released 2016/10/24
+##  Path to GDAL shared files: /Users/Maxwell/Library/R/3.3/library/rgdal/gdal
+##  GDAL binary built with GEOS: FALSE 
+##  Loaded PROJ.4 runtime: Rel. 4.9.1, 04 March 2015, [PJ_VERSION: 491]
+##  Path to PROJ.4 shared files: /Users/Maxwell/Library/R/3.3/library/rgdal/proj
+##  Linking to sp version: 1.2-5</code></pre>
+<pre class="r"><code>library(rts) #install and load the rts package for modistools specifically</code></pre>
+<pre><code>## Loading required package: xts</code></pre>
+<pre><code>## Loading required package: zoo</code></pre>
+<pre><code>## 
+## Attaching package: &#39;zoo&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:base&#39;:
+## 
+##     as.Date, as.Date.numeric</code></pre>
+<pre><code>## Loading required package: RCurl</code></pre>
+<pre><code>## Loading required package: bitops</code></pre>
+<pre><code>## rts 1.0-45 (2018-03-17)</code></pre>
+<pre class="r"><code>#need to set nasa authorization (username and password that are separately acquired online, see link above), but only need to do once with the function below: setNASAauth()
+#setNASAauth()
+#setMRTpath(&quot;/Users/Maxwell/MRT/bin/&quot;, update=T) #function to set the path of the modis reprojection tool for the functions to find
+#modisProducts() #function to check out possible products (Beware, the version of Modis matters for extracting with ModisDownload later)</code></pre>
+<pre class="r"><code>#make a date sequence to extract
+start&lt;-NULL
+end&lt;-NULL
+start&lt;-paste0(rep(2016:2018,1) , rep(&quot;.01.01&quot;,2))
+end&lt;-paste0(rep(2016:2018,1),rep(&quot;.05.31&quot;,2))
+start</code></pre>
+<pre><code>## [1] &quot;2016.01.01&quot; &quot;2017.01.01&quot; &quot;2018.01.01&quot;</code></pre>
+<pre class="r"><code>end</code></pre>
+<pre><code>## [1] &quot;2016.05.31&quot; &quot;2017.05.31&quot; &quot;2018.05.31&quot;</code></pre>
+<pre class="r"><code>#combine into one statement for each desired date so it is easy to loop
+dateseq&lt;-NULL
+dateseq&lt;-paste((start), noquote(&quot;\&quot;,\&quot;&quot;), paste(end), sep = &quot;&quot;) 
+dateseq</code></pre>
+<pre><code>## [1] &quot;2016.01.01\&quot;,\&quot;2016.05.31&quot; &quot;2017.01.01\&quot;,\&quot;2017.05.31&quot;
+## [3] &quot;2018.01.01\&quot;,\&quot;2018.05.31&quot;</code></pre>
+<p>Now to extract dates we have set up from a particular modis product</p>
+<pre class="r"><code>#extract dateseq for all of oregon, mosaic, and reproject all in one step using ModisDownload
+  ##note the &quot;MOD13A3&quot; is the modis product
+    ###h and v are the modis tiles (can look up online which oncs youll need)
+      ####bands - each modis product has a bunch of bands, so here can specify which ones you want, need to put 0 or 1 for all or else it may do somethin weird
+        #####proj_params Something weird, look up in the package to get a better idea of what to do here.
+          ######utm_zone only needed if using UTM
+            ######Datum: projection, pixel size: set what you what, mosaic: default is FALSE, need to set to true to mosaic. If you want there is a separate funciton to do it manually. Same                with proj, which reprojects the mosaicked file to a tif. Versopm: important, seems like 006 has everything I wanted, 005 didnt have much.
+#download all modis files in the date range to your working directory (set above)
+
+ModisDownload(&quot;MOD13A3&quot;,h=c(8, 9),v=c(4,4),dates=c(&quot;2016.01.01&quot;, &quot;2016.05.31&quot;),bands_subset=&quot;1 0 0 0 0 0 0&quot;, proj_type=&quot;UTM&quot;,proj_params=&quot;0 0 0 0 0 0 0 0 0 0 0 0 0 0 0&quot;,utm_zone=c(10,11),datum=&quot;WGS84&quot;,pixel_size=250, mosaic = T, proj=T, version=&#39;006&#39;)</code></pre>
+<pre><code>## Warning in strptime(x, format, tz = &quot;GMT&quot;): unknown timezone &#39;default/
+## America/Los_Angeles&#39;</code></pre>
+<pre class="r"><code>#Show files of some pattern in WD
+listfiles &lt;- list.files(pattern=&#39;MOD13&#39;) # in wd
+listfiles&lt;-listfiles[1:5] #or whatever ones are .tif
+plot(raster(listfiles[1])) # take a look at what they look like!</code></pre>
+<p><img src="modisrts_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<pre class="r"><code>#Download, or get shape files separately if you want to crop, my interest here is Oregon.
+oregon&lt;-readOGR(dsn=&quot;/Users/Maxwell/Documents/geospatial/orcnty2015/&quot;, layer = &quot;orcntypoly&quot;)
+orutm&lt;-spTransform(oregon, crs(raster(listfiles[1]))) #make sure coordinate systems of shapes and MODIS files match
+plot(orutm)</code></pre>
+<p><img src="modisrts_files/figure-html/unnamed-chunk-3-2.png" width="672" /></p>
+<pre class="r"><code>#make a loop to read in all the tif files and crop them to oregon size, then put them all into a rasterstack
+r&lt;-NULL
+NDVI&lt;-NULL
+for(i in listfiles[1:2]) #just doing two of them for demonstration
+  {
+ r&lt;-raster(i)/10000 #divide by 10000 to get into correct units.
+ #extent(r)&lt;-extent(orutm) #match extents
+ r&lt;-crop(r, orutm) #crop to size
+ r&lt;-mask(r, orutm) #hide outside pixels
+ NDVI&lt;-stack(r, NDVI) #put all modified into a single raster stack
+}</code></pre>
+<pre class="r"><code>plot(NDVI)</code></pre>
+<p><img src="modisrts_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

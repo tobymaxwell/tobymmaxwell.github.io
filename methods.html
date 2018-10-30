@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title></title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 64px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+
+.section h2 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h3 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h4 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h5 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h6 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Toby Maxwell</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="about.html">About Me</a>
+</li>
+<li>
+  <a href="projects.html">Current Projects</a>
+</li>
+<li>
+  <a href="pubs.html">Publications</a>
+</li>
+<li>
+  <a href="https://tobymaxwell.github.io/files/CV.pdf">CV</a>
+</li>
+<li>
+  <a href="methods.html">Methods</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="contact.html">
+    <span class="fa fa-envelope fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://twitter.com/tobymmaxwell">
+    <span class="fa fa-twitter fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://www.linkedin.com/in/toby-maxwell-18aa195b/">
+    <span class="fa fa-linkedin fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="http://github.com/eeooo4">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+
+</div>
+
+
+<hr />
+<hr />
+<div id="methods-of-analysis" class="section level3">
+<h3>Methods of Analysis</h3>
+<p>Coming from the world of chemistry I strongly believe that lab work is about fine tuning rather than about simply generating a result. To that end I am trying to publish reproducable methods with pro tips on this site. Comments, questions, and criticsm are all welcome!</p>
+<p>Below I try to briefly introduce why one would go about measuring something, and then a link is provided to tell you everything I know about making the right decisions to get an accurate measurement with both anecdotal and literature based references were possible.</p>
+<div id="first-some-notes-on-design" class="section level5">
+<h5><strong>First, some notes on design</strong></h5>
+<p>It is important to think about where variability lies in an experiment and sample accordingly. To help decide how many samples to take, consider using an <strong>a priori test of statistical power</strong> to estimate sample sizes that will be required. A short tutorial with R code is found <a href="power.html">here</a>.</p>
+<p>Then, comes design! I certainly can’t provide a comprehensive list, but a few common field designs are mentioned in brief <a href="design.html">here</a></p>
+</div>
+<div id="soil-sampling" class="section level5">
+<h5><strong>Soil Sampling</strong></h5>
+<p>As with any sampling there is no one way to sample soil and plants to observe interactive effects, but as soil is notoriously heterogenous, and you can only take a small number of plant samples to the lab, methods must be refined to a research question to avoid extraneous sampling. Some tips for how to start thinking about this are included <a href="ssampling.html">here</a>. Also you should pick up a free copy of the USDA NRCS <a href="https://www.nrcs.usda.gov/wps/portal/nrcs/detail/soils/research/guide/?cid=nrcs142p2_054184">Field Book for Describing and Sampling Soils</a>.</p>
+</div>
+<div id="total-carbon-and-nitrogen-analysis" class="section level5">
+<h5><strong>Total Carbon and Nitrogen Analysis</strong></h5>
+<p>Total carbon and nitrogen analysis are the ‘hammer’ of a soil scientist’s tool kit. This is most commonly measured using an elemental analyzer which quantitatively combusts a sample, generating CO<sub>2</sub> and N<sub>2</sub> which can then be measured. Investigations of carbon content are especially important for soils as organic carbon is important for agriculture (water holding capacity, infiltration, microbial activity) and in ecology as a tool quantifying those same things in the context of ecosystem services and the impacts of natural processes.</p>
+<p>In addition, carbon and nitrogen together tell the most basic information about relative nitrogen limitation in a system. Whether in leaf, litter, or soil, C:N ratios are an important indicator of nitrogen status of a plant, or ecosystem. A rule of thumb is that if C:N&gt;30 then the system is nitrogen depleted and microbial activity will tend to ‘immobilize’ nitrogen via increases in microbial biomass, less than 30 and nitrogen may be released by microbial mineralization of organic matter. Simply put, if microbes are limited, they stock up on N, if they have excess, they release it form the system.</p>
+<p>The methods of analysis are going to be different for every lab, but I have summarized the preparation steps <a href="CN.html">here</a></p>
+</div>
+<div id="modisterra-bulk-extraction-of-data-in-r" class="section level5">
+<h5><strong>MODIS/TERRA bulk extraction of data in R</strong></h5>
+<p>Modis provides a high frequency spatial data for many different parameters across the globe. My interest is most commonly in NDVI or EVI to look at productivity, but an amazing amount of data is available, see their [list] (<a href="https://lpdaac.usgs.gov/dataset_discovery/modis/modis_products_table" class="uri">https://lpdaac.usgs.gov/dataset_discovery/modis/modis_products_table</a>). Beware however, that some products are linked, e.g. evapotranspiration is calculated from a relationship NDVI, so they are not independent. See my code for an efficient way to download and aggregate large amounts of modis data in my tutorial <a href="modisrts.html">here</a>.</p>
+</div>
+<div id="leaf-area-index" class="section level5">
+<h5><strong>Leaf Area Index</strong></h5>
+<p>Leaf Area Index is an efficient way to measure the productivity of a site. It has been shown to relate to NDVI, evapotranspiration, and water use efficiency. An full hemispherical fisheye lens is required, but after that, you can get all the data you want! A description of how to take pictures in the field is <a href="lai.html">here</a>. I will not get into image processing, because there are liekly many options for that process. I have used free software that is available for processing images <a href="http://www.caryinstitute.org/science-program/our-scientists/dr-charles-d-canham/gap-light-analyzer-gla">from the cary institute</a>. This has worked well for me, and has excellent supporting documentation, and peer reviewed, published validation.</p>
+</div>
+<div id="soil-texture-analysis" class="section level5">
+<h5><strong>Soil Texture Analysis</strong></h5>
+<p>There are many reasons people measure soil texture. Some basic interests include links to hydrologic properties within and between layers, i.e. drainage, storage, and their kinetics. Also, carbon and nutrient storage and cycling, and microbial activity are all interdependent and often relate to the ability of a soil to store available nutrients and water. There is a ‘goldilocks’ zone where there is enough surface area to store nutrients and water, while still allowing some active movement and cylcing, rather than immobilizing soil water and nutrient flows. There are many methods for measuring soil texture, most common are hydrometer and pipette methods described <a href="texture.html">here</a>. Additionally particle size analyzers are commercially available which use <a href="https://en.wikipedia.org/wiki/Laser_diffraction_analysis">laser diffraction</a>.</p>
+</div>
+<div id="soil-iron-and-aluminum-mineralogy" class="section level5">
+<h5><strong>Soil Iron and Aluminum Mineralogy</strong></h5>
+<p>Important for mineralogical analysis, and selective dissolution of different mineral forms of iron and aluminum. This method is growing in use and popularity for evaluating soil carbon storage potentia because of recently published work that suggests soil mineral characteristics may better predict carbon storage/potential than more classic concepts (i.e. texture). Methods <a href="iron.html">here</a>.</p>
+</div>
+<div id="soil-and-litter-bulk-density" class="section level5">
+<h5><strong>Soil and litter Bulk Density</strong></h5>
+<p>Bulk density of soil and litter is very simple to measure and adds a significant component to stoichiometric analysis of a system. This measurement can convert total carbon and nitrogen data, to total carbon per unit area, increasing the scalability and improving the value of total carbon measurements.</p>
+<p>For soil: you can buy brass or steel cylindrical rings, or make your own. It is important to disturb the soil as little as possible. One way to help, is to make one edge of your cylinder angled (but not quite sharp). This helps to push it into the soil. After pushing the cylinder into the soil, you extract it, now with a known volme of soil. Dry it in an oven at 105°C for 48 hours. With that weight you can calculate the g/cm<sup>3</sup> of soil. Typical values are 1-1.6, or less for volcanic and organic rich soils, more for compacted or very ‘heavy’ clay soils.</p>
+<p>For litter, some kind of square frame works best which can be placed on the ground, all the detritus within the frame is collected, and weighed after drying for 48 hours at 60°C. This gives units of g/cm<sup>2</sup>.</p>
+</div>
+<div id="soil-ph" class="section level5">
+<h5><strong>Soil pH</strong></h5>
+<p>Similar to texture, pH is a soil property that is often used as a very general indicator of soil processes, as it corresponds to many things including microbial community, weathering, fertility. It is quite easy to measure, highly studied, and commonly varies across natural gradients (e.g. climate), so it can provide useful insight into how soils vary over space. pH is also critical to determining the solubility of organic matter, as well as base cations in solution impacting many soil processes. Some things to consider when measuring pH are drescribed <a href="ph.html">here</a></p>
+</div>
+</div>
+<div id="coming-soon" class="section level3">
+<h3>Coming soon…</h3>
+<div id="cellulose-extraction-from-plant-tissue" class="section level5">
+<h5>Cellulose Extraction from plant tissue</h5>
+</div>
+<div id="specific-leaf-area-measurement" class="section level5">
+<h5>Specific Leaf Area Measurement</h5>
+</div>
+<div id="soilplant-phosphorous-analysis" class="section level5">
+<h5>Soil/plant Phosphorous Analysis</h5>
+</div>
+<div id="soil-avalable-water-capacity" class="section level5">
+<h5>Soil Avalable Water Capacity</h5>
+</div>
+<div id="soil-nitrate-and-ammonium-analysis" class="section level5">
+<h5>Soil Nitrate and Ammonium Analysis</h5>
+</div>
+<div id="basic-use-of-google-earth-engine-for-time-series-analysis" class="section level5">
+<h5>Basic use of Google Earth Engine for Time Series Analysis</h5>
+</div>
+<div id="trace-gas-sampling-protocols" class="section level5">
+<h5>Trace Gas sampling protocols</h5>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

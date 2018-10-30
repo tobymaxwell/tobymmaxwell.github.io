@@ -1,0 +1,120 @@
+---
+title: "Particle Size Analysis"
+---
+Clasically people learn the hydrometer method, it's great, tried and true, and gives good data. That being said, similar accuracy has been demonstrated by the modified pipette method (detailed second here). It allows for much higher sample throughput making it my preferred method.
+
+##Hydrometer Method
+####Materials
+Graduated cylinders (1000 mL)
+Mortar and pestle
+scale
+sodium hexametaphosphate (solution of 50g/L)
+plungers
+hydrometer
+
+####Procedure
+1. **Lightly** crush soils to separate aggregates and sieve to 2 mm. Pick out twigs, grass roots etc.  
+
+2. Weigh 40 grams (+/- 0.5) of air dry <2mm soil into a bottle. Add 50 mL sodium hexametaphosphate solution and 100 mL water to that bottle. Shake on a mechanical shaker overnight.  
+
+3. Add soil solution to graduated cylinder. This must be a quatitative transfer, since the calculations rely on the original weight. You can use water and a squirt bottle to do this, as it will all end up in the graduated cylinder and the volume can be accounted for, by filling each cylinder to a full 1000 mL.
+
+4. Agitate the solution for 1 minute with the plunger so all soil is in suspension
+Gently place hydrometer in, let it settle, and get an accurate reading from the meniscus at 40 seconds time (sand has settled), and then again at exactly 120 minutes.
+
+5. While waiting... you need to do a blank, using the hexametaphosphate solution take the same readings with no soil added. 
+
+Calculations are as follows:
+
+```{r}
+#Calculations (made up numbers)
+
+#You will need to calculate concentration from the hydrometer which gives a density of the mixture.
+
+#calc percent sand
+a<- 39/1000 #original concentration, which is the oven dry weight of soil added to 1000 mL fluid in the cylinder. For example, 39 grams/L
+b<- 12/1000#corrected 40 second reading (from reading-blankblank)
+c<- -2/1000 #blank correction
+pctsand<-function(original, reading, correction){(original-(reading+correction))/original}
+sand<-pctsand(a,b,c)*100 #convert to percent
+
+#this would be a sample of 74.4% sand!
+
+#calc percent clay
+a<- 39/1000 #original concentration, which is the oven dry weight of soil added to 1000 mL fluid in the cylinder. For example, 39 grams/L
+d<- 5/1000#corrected 40 second reading (from reading-blankblank)
+e<- -1/1000 #blank correction
+pctclay<-function(original, reading, correction){((reading+correction))/original}
+clay<-pctclay(a,d,e)*100 #convert to percent
+
+#10.3% Clay
+
+#calc percent silt
+pctsilt<-function(sand,clay){100-(clay+sand)}
+silt<-pctsilt(sand, clay)
+```
+
+##Modified Pipette Method
+
+Method is based on stokes law: v=g(ps-pl)x^2/18n under the assumption that soil particles are spheres.
+
+v=velocity of a fall
+g=acceleration of gravity
+ps = particle density
+pl = liquid density
+x = particle diameer
+n = fluid viscosity
+
+####Materials
+50 mL centrifuge tubes  
+Aluminum weigh boats 
+Scale (a standard analytical scale that measures to 0.0001 g)  
+50 mL dispensette   
+adjustable 50 mL pipette with tips and stopper (can make your own)  
+reciprocating shaker  
+0.5% Sodium Hexametaphosphate - 5 g/L  
+
+####Procedure
+1. weigh out 5 grams soil air dried and sieved to 2 mm into centrifuge tube.
+2. add 40 mL 0.5% Sodium Hexametaphosphate to each tube, cap them.
+3. Shake overnight on recipprocating shaker
+4. Pre-Weigh sample tins which will be used to dispense aliquots of soil suspended in water.
+5. After shaking overnight, hand shake to further disperse and allow to settle according to the table below (temperature dependent).
+
+```{r echo=FALSE, results = 'asis'}
+settlingtime<-NULL
+settlingtime$Sandmins<-c(12.3,11.7,11.1,10.6,10.2,9.7)
+settlingtime$Claymins<-c(128.1,121.9,116.1,110.8,105.8,101.2)
+settlingtime<-as.data.frame(settlingtime)
+colnames(settlingtime)<-c("Sand (seconds)", "Clay (minutes)")
+rownames(settlingtime)<-c("16&deg;C","18&deg;C","20&deg;C","22&deg;C","24&deg;C","26&deg;C")
+library(knitr)
+kable(settlingtime, caption="Settling Times for Sand and Clay Sampling by Temperature")
+```
+
+6. Pipette 2.5 mL from each vial 2.5 mL below the surface of the solution for each measurement of sand and clay. Dispense that in preweighed tins, dry in an oven until water is removed.  
+7. Remove dried tins, allow to cool, and record dry weight to nearest 0.0001 grams.  
+  
+####Calculations
+
+```{r}
+#example calculation from some of my data using R.
+sand<-function(dryweight,tinweight,blank, originalsoiladded){100-(((((dryweight-tinweight)-blank)*40/2.5)/originalsoiladded)*100)} #generate a function for inputting data.
+
+#data below for inputting into function
+a<-1.1561
+b<-1.0889
+c<-0.0133
+d<-5.6549
+sand(a,b,c,d)
+
+clay<-function(dryweight, tinweight, blank, originalsoiladded){((((dryweight-tinweight)-blank)*40/2.5)/originalsoiladded)*100}
+e<-0.9394
+f<-0.9206
+c<-0.0133
+d<-5.6549
+clay(e,f,c,d)
+
+silt<-(100-sand(a,b,c,d)-clay(e,f,c,d))
+print(silt)
+```

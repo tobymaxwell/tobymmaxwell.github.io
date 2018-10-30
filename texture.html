@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Particle Size Analysis</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 64px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+
+.section h2 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h3 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h4 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h5 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h6 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Toby Maxwell</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="about.html">About Me</a>
+</li>
+<li>
+  <a href="projects.html">Current Projects</a>
+</li>
+<li>
+  <a href="pubs.html">Publications</a>
+</li>
+<li>
+  <a href="https://tobymaxwell.github.io/files/CV.pdf">CV</a>
+</li>
+<li>
+  <a href="methods.html">Methods</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="contact.html">
+    <span class="fa fa-envelope fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://twitter.com/tobymmaxwell">
+    <span class="fa fa-twitter fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://www.linkedin.com/in/toby-maxwell-18aa195b/">
+    <span class="fa fa-linkedin fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="http://github.com/eeooo4">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Particle Size Analysis</h1>
+
+</div>
+
+
+<p>Clasically people learn the hydrometer method, it’s great, tried and true, and gives good data. That being said, similar accuracy has been demonstrated by the modified pipette method (detailed second here). It allows for much higher sample throughput making it my preferred method.</p>
+<div id="hydrometer-method" class="section level2">
+<h2>Hydrometer Method</h2>
+<div id="materials" class="section level4">
+<h4>Materials</h4>
+<p>Graduated cylinders (1000 mL) Mortar and pestle scale sodium hexametaphosphate (solution of 50g/L) plungers hydrometer</p>
+</div>
+<div id="procedure" class="section level4">
+<h4>Procedure</h4>
+<ol style="list-style-type: decimal">
+<li><p><strong>Lightly</strong> crush soils to separate aggregates and sieve to 2 mm. Pick out twigs, grass roots etc.</p></li>
+<li><p>Weigh 40 grams (+/- 0.5) of air dry &lt;2mm soil into a bottle. Add 50 mL sodium hexametaphosphate solution and 100 mL water to that bottle. Shake on a mechanical shaker overnight.</p></li>
+<li><p>Add soil solution to graduated cylinder. This must be a quatitative transfer, since the calculations rely on the original weight. You can use water and a squirt bottle to do this, as it will all end up in the graduated cylinder and the volume can be accounted for, by filling each cylinder to a full 1000 mL.</p></li>
+<li><p>Agitate the solution for 1 minute with the plunger so all soil is in suspension Gently place hydrometer in, let it settle, and get an accurate reading from the meniscus at 40 seconds time (sand has settled), and then again at exactly 120 minutes.</p></li>
+<li><p>While waiting… you need to do a blank, using the hexametaphosphate solution take the same readings with no soil added.</p></li>
+</ol>
+<p>Calculations are as follows:</p>
+<pre class="r"><code>#Calculations (made up numbers)
+
+#You will need to calculate concentration from the hydrometer which gives a density of the mixture.
+
+#calc percent sand
+a&lt;- 39/1000 #original concentration, which is the oven dry weight of soil added to 1000 mL fluid in the cylinder. For example, 39 grams/L
+b&lt;- 12/1000#corrected 40 second reading (from reading-blankblank)
+c&lt;- -2/1000 #blank correction
+pctsand&lt;-function(original, reading, correction){(original-(reading+correction))/original}
+sand&lt;-pctsand(a,b,c)*100 #convert to percent
+
+#this would be a sample of 74.4% sand!
+
+#calc percent clay
+a&lt;- 39/1000 #original concentration, which is the oven dry weight of soil added to 1000 mL fluid in the cylinder. For example, 39 grams/L
+d&lt;- 5/1000#corrected 40 second reading (from reading-blankblank)
+e&lt;- -1/1000 #blank correction
+pctclay&lt;-function(original, reading, correction){((reading+correction))/original}
+clay&lt;-pctclay(a,d,e)*100 #convert to percent
+
+#10.3% Clay
+
+#calc percent silt
+pctsilt&lt;-function(sand,clay){100-(clay+sand)}
+silt&lt;-pctsilt(sand, clay)</code></pre>
+</div>
+</div>
+<div id="modified-pipette-method" class="section level2">
+<h2>Modified Pipette Method</h2>
+<p>Method is based on stokes law: v=g(ps-pl)x^2/18n under the assumption that soil particles are spheres.</p>
+<p>v=velocity of a fall g=acceleration of gravity ps = particle density pl = liquid density x = particle diameer n = fluid viscosity</p>
+<div id="materials-1" class="section level4">
+<h4>Materials</h4>
+<p>50 mL centrifuge tubes<br />
+Aluminum weigh boats Scale (a standard analytical scale that measures to 0.0001 g)<br />
+50 mL dispensette<br />
+adjustable 50 mL pipette with tips and stopper (can make your own)<br />
+reciprocating shaker<br />
+0.5% Sodium Hexametaphosphate - 5 g/L</p>
+</div>
+<div id="procedure-1" class="section level4">
+<h4>Procedure</h4>
+<ol style="list-style-type: decimal">
+<li>weigh out 5 grams soil air dried and sieved to 2 mm into centrifuge tube.</li>
+<li>add 40 mL 0.5% Sodium Hexametaphosphate to each tube, cap them.</li>
+<li>Shake overnight on recipprocating shaker</li>
+<li>Pre-Weigh sample tins which will be used to dispense aliquots of soil suspended in water.</li>
+<li>After shaking overnight, hand shake to further disperse and allow to settle according to the table below (temperature dependent).</li>
+</ol>
+<table>
+<caption>Settling Times for Sand and Clay Sampling by Temperature</caption>
+<thead>
+<tr class="header">
+<th></th>
+<th align="right">Sand (seconds)</th>
+<th align="right">Clay (minutes)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>16°C</td>
+<td align="right">12.3</td>
+<td align="right">128.1</td>
+</tr>
+<tr class="even">
+<td>18°C</td>
+<td align="right">11.7</td>
+<td align="right">121.9</td>
+</tr>
+<tr class="odd">
+<td>20°C</td>
+<td align="right">11.1</td>
+<td align="right">116.1</td>
+</tr>
+<tr class="even">
+<td>22°C</td>
+<td align="right">10.6</td>
+<td align="right">110.8</td>
+</tr>
+<tr class="odd">
+<td>24°C</td>
+<td align="right">10.2</td>
+<td align="right">105.8</td>
+</tr>
+<tr class="even">
+<td>26°C</td>
+<td align="right">9.7</td>
+<td align="right">101.2</td>
+</tr>
+</tbody>
+</table>
+<ol start="6" style="list-style-type: decimal">
+<li>Pipette 2.5 mL from each vial 2.5 mL below the surface of the solution for each measurement of sand and clay. Dispense that in preweighed tins, dry in an oven until water is removed.<br />
+</li>
+<li>Remove dried tins, allow to cool, and record dry weight to nearest 0.0001 grams.</li>
+</ol>
+</div>
+<div id="calculations" class="section level4">
+<h4>Calculations</h4>
+<pre class="r"><code>#example calculation from some of my data using R.
+sand&lt;-function(dryweight,tinweight,blank, originalsoiladded){100-(((((dryweight-tinweight)-blank)*40/2.5)/originalsoiladded)*100)} #generate a function for inputting data.
+
+#data below for inputting into function
+a&lt;-1.1561
+b&lt;-1.0889
+c&lt;-0.0133
+d&lt;-5.6549
+sand(a,b,c,d)</code></pre>
+<pre><code>## [1] 84.74951</code></pre>
+<pre class="r"><code>clay&lt;-function(dryweight, tinweight, blank, originalsoiladded){((((dryweight-tinweight)-blank)*40/2.5)/originalsoiladded)*100}
+e&lt;-0.9394
+f&lt;-0.9206
+c&lt;-0.0133
+d&lt;-5.6549
+clay(e,f,c,d)</code></pre>
+<pre><code>## [1] 1.556173</code></pre>
+<pre class="r"><code>silt&lt;-(100-sand(a,b,c,d)-clay(e,f,c,d))
+print(silt)</code></pre>
+<pre><code>## [1] 13.69432</code></pre>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

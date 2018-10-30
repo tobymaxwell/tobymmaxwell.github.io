@@ -1,0 +1,9 @@
+---
+---
+<img src="images/field.jpg" style="width:150%; border:1px solid; margin-right: 20px" align="center">  
+
+I am a plant ecophysiologist and biogeochemist working in Professor Lucas Silva's [Soil Plant Atmosphere Lab](https://www.soilplantatmosphere.com) in the institute of Ecology and Evolution at the University of Oregon.
+Currently a post doctoral scholar, my work seeks to evaluate the impacts of climate change across the landscape by merging physiological and trait based ecology as indicators of plant responses to stress with classical metrics of soil quality and fertility, connecting above and below ground drivers and responses to climate change. I specialize in applying statistical models and geospatial analysis to connect site level information with remotely sensed and modeled data. By doing so my research seeks to connect site level phenomena to landscape scale processes to better understand drivers of ecological patterns and how they are shifting with climate change across scales.
+
+<iframe width="560" height="315" allign = "center" src="https://www.youtube.com/embed/lDVFHbUV7z4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+Me in my ideal setting, thinking about science in the middle of the grand canyon!
